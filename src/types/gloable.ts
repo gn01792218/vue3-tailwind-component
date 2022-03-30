@@ -6,6 +6,13 @@ export enum Direction {
 }
 export interface CheckBoxProperty {
     labelStr:string,
-    LabelDir:Direction,
+    labelDir:Direction,
     value:string | number,
+}
+export interface checkBoxEmitData {
+    isSelected:boolean,
+    value:string | number,
+}
+export interface CheckGroupData {
+    checkItems:CheckBoxProperty[],
 }

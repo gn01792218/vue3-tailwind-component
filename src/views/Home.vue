@@ -6,14 +6,14 @@
       <p>可選擇label位置在左或右</p>
       <CheckBox
         :checkBoxItem="{
-          LabelDir: Direction.right,
+          labelDir: Direction.right,
           labelStr: '右邊的標籤',
           value: '',
         }"
       />
       <CheckBox
         :checkBoxItem="{
-          LabelDir: Direction.left,
+          labelDir: Direction.left,
           labelStr: '左邊的標籤',
           value: '',
         }"
@@ -23,17 +23,26 @@
       <p>顯示model data</p>
       <CheckBoxWithSingleModelData
         :checkBoxItem="{
-          LabelDir: Direction.right,
+          labelDir: Direction.right,
           labelStr: '右邊的標籤',
           value: '',
         }"
       />
       <CheckBoxWithSingleModelData
         :checkBoxItem="{
-          LabelDir: Direction.left,
+          labelDir: Direction.left,
           labelStr: '左邊的標籤',
           value: '',
         }"
+      />
+    </div>
+    <div class="mb-5">
+      <p>多個使用時，綁定Array數值</p>
+      <CheckBoxGroupVue
+        :checkGroupData="{ checkItems: [
+        {labelStr:'Dog',labelDir:Direction.right,value:'dog'},
+        {labelStr:'Cat',labelDir:Direction.right,value:'cat'},
+        ] }"
       />
     </div>
   </section>
@@ -43,7 +52,7 @@ import { ref } from "vue";
 import { Direction } from "@/types/gloable";
 import CheckBox from "@/component/checkBox/CheckBox.vue";
 import CheckBoxWithSingleModelData from "@/component/checkBox/CheckBoxWithSingleModelData.vue";
-const count = ref(0);
+import CheckBoxGroupVue from "@/component/checkBox/CheckBoxGroup.vue";
 </script>
 
 <style scoped></style>

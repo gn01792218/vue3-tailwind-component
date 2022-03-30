@@ -1,4 +1,13 @@
+export enum Direction {
+    top,
+    right,
+    left,
+    bottom,
+}
+
 export enum Color {
-    coral,
-    aqua,
+    default,
+    red,
+    orange,
+    green,
 }

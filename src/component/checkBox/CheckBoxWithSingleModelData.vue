@@ -16,7 +16,8 @@
 </template>
 <script setup lang="ts">
 import { ref ,PropType } from "vue";
-import { Direction,CheckBoxProperty,checkBoxEmitData } from '@/types/gloable';
+import { Direction } from '@/types/enum/enum'
+import { CheckBoxProperty,checkBoxEmitData } from '@/types/checkBox/checkBox';
 import useComponentControl from '@/composable/useComponentControl';
 import CheckBox from '@/component/checkBox/CheckBox.vue';
 const props = defineProps<{

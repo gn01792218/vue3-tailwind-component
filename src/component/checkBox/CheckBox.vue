@@ -3,60 +3,49 @@
     class="flex justify-center items-center"
     v-if="checkBoxItem.labelDir === Direction.right"
   >
-    <label :for="`checkbox-${id}`">
+    <label class="relative cursor-pointe">
       <input
-        :id="`checkbox-${id}`"
         class="mr-1"
         type="checkbox"
         :value="checkBoxItem.value"
         v-model="checked"
       />
       {{ checkBoxItem.labelStr }}
-      <div class="show-box" :class="[{ backGroundColorClass: checked },{}]"></div>
+      <div :class="[checked ? `${backGroundColorClass} ${borderColorClass}`:'','show-box']"></div>
     </label>
   </div>
   <div
     class="flex justify-center items-center"
     v-if="checkBoxItem.labelDir === Direction.left"
   >
-  <label :for="`checkbox-${id}`">
-       {{ checkBoxItem.labelStr }}
+  <label class="relative cursor-pointer">
+       <span>{{ checkBoxItem.labelStr }}</span>
       <input
-        :id="`checkbox-${id}`"
-        class="mr-1"
+        class="absolute top-1 mr-1"
         type="checkbox"
         :value="checkBoxItem.value"
         v-model="checked"
       />
-      <div class="show-box show-box-right" :class="[checked ? `${backGroundColorClass}`:'']"></div>
+      <div :class="[checked ? `${backGroundColorClass} ${borderColorClass}`:'','show-box','show-box-right']"></div>
     </label>
-    <!-- <label :for="`checkbox-${id}`">{{ checkBoxItem.labelStr }}</label>
-    <input
-      :id="`checkbox-${id}`"
-      class="ml-1"
-      type="checkbox"
-      :value="checkBoxItem.value"
-      v-model="checked"
-    /> -->
   </div>
 </template>
 <script setup lang="ts">
 import { onMounted, ref, watch } from "vue";
-import { Color } from "@/types/enum/enum";
-import { Direction, CheckBoxProperty, checkBoxEmitData } from "@/types/gloable";
-import useComponentControl from "@/composable/useComponentControl";
+import { Color, Direction } from "@/types/enum/enum";
+import { CheckBoxProperty, checkBoxEmitData } from "@/types/checkBox/checkBox";
 const emits = defineEmits(["isSelected"]);
 const props = defineProps<{
   checkBoxItem: CheckBoxProperty;
 }>();
-const { addCheckBox } = useComponentControl();
-const id = addCheckBox();
 const checked = ref(false);
+//客製化的設定變數
 const style = props.checkBoxItem.style
-const backGroundColor = style?.backGroundColor //客製化的背景顏色
+const backGroundColor = style?.backGroundColor 
 const backGroundColorClass = ref('')
+const borderColorClass = ref('')
 onMounted(()=>{
-
+ changeStyle()
 })
 watch(checked, () => {
   let checkBoxEmit: checkBoxEmitData = {
@@ -66,13 +55,20 @@ watch(checked, () => {
   emits("isSelected", checkBoxEmit);
 });
 function changeStyle(){
-    if(!style) return
+    if(!style)return 
     switch(backGroundColor){
-        case Color.coral:
-            backGroundColorClass.value = "clr-coral"
+        case Color.red:
+            backGroundColorClass.value = "bg-red-700"
+            borderColorClass.value = "border-red-700"
             break;
-        case Color.aqua:
-            backGroundColorClass.value = "clr-aqua"
+        case Color.orange:
+            backGroundColorClass.value = "bg-orange-400"
+            borderColorClass.value = "border-orange-400"
+            break;
+        case Color.green:
+            backGroundColorClass.value = "bg-green-500"
+            borderColorClass.value = "border-green-500"
+            break;
     }
 }
 </script>

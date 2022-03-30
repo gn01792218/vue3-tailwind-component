@@ -16,10 +16,6 @@
 .br-clr-aqua{
     border: 1px solid aqua !important;
 }
-label{
-    position: relative;
-    cursor: pointer;
-}
 .show-box{
     position: absolute;
     top:4px;
@@ -27,12 +23,10 @@ label{
     width:13px;
     height:13px;
     border-radius: 2px;
-    border: 1px solid black;
-    background-color: white;
 }
 .show-box-right{
     top:4px;
-    left:84%;
+    left:100%;
 }
 .show-box::before{
     content: '';

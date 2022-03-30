@@ -9,8 +9,8 @@
 </template>
 <script setup lang="ts">
 import { ref, reactive } from "vue";
+import { Direction } from '@/types/enum/enum'
 import {
-  Direction,
   CheckBoxProperty,
   CheckGroupData,
   checkBoxEmitData,

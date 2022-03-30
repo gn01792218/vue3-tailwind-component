@@ -5,13 +5,13 @@ const {resolve} = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: './',
+  base: "./",
   define:{
-    'process.env':{}
+    "process.env":{}
   },
   resolve:{
     alias:{
-      '@':resolve(__dirname,'src')
+      "@":resolve(__dirname,"src")
     }
   }
 })

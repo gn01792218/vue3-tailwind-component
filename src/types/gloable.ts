@@ -4,3 +4,8 @@ export enum Direction {
     left,
     bottom,
 }
+export interface CheckBoxProperty {
+    labelStr:string,
+    LabelDir:Direction,
+    value:string | number,
+}

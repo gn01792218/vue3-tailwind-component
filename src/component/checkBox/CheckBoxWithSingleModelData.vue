@@ -1,16 +1,14 @@
 <template>
-  <div v-if="LabelDir === Direction.right">
+  <div v-if="checkBoxItem.LabelDir === Direction.right">
       <CheckBox
-        :labelStr = "labelStr"
-        :LabelDir = "LabelDir"
+        :checkBoxItem="checkBoxItem"
         @is-selected="selectFun"
       />
       <p>The model data : {{modelData}}</p>
   </div>
-  <div v-if="LabelDir === Direction.left">
+  <div v-if="checkBoxItem.LabelDir === Direction.left">
       <CheckBox
-        :labelStr = "labelStr"
-        :LabelDir = "LabelDir"
+        :checkBoxItem="checkBoxItem"
         @is-selected="selectFun"
       />
       <p>The model data : {{modelData}}</p>
@@ -18,19 +16,12 @@
 </template>
 <script setup lang="ts">
 import { ref ,PropType } from "vue";
-import { Direction } from '@/types/gloable';
+import { Direction,CheckBoxProperty } from '@/types/gloable';
 import useComponentControl from '@/composable/useComponentControl';
 import CheckBox from '@/component/checkBox/CheckBox.vue';
- const props = defineProps({
-    labelStr:{
-        type:String,
-        required:true,
-    },
-    LabelDir:{
-        type:Number as PropType<Direction>,
-        default:Direction.right
-    },
-})
+const props = defineProps<{
+    checkBoxItem:CheckBoxProperty,
+}>()
 const { addCheckBox } = useComponentControl()
 const modelData = ref<boolean>(false)
 function selectFun(emitData:boolean){

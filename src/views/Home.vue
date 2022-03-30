@@ -9,6 +9,9 @@
           labelDir: Direction.right,
           labelStr: '右邊的標籤',
           value: '',
+          style:{
+            backGroundColor:Color.aqua
+          }
         }"
       />
       <CheckBox
@@ -45,10 +48,15 @@
         ] }"
       />
     </div>
+    <div class="mb-5">
+      <p>自訂義勾選框框的顏色</p>
+      
+    </div>
   </section>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
+import { Color } from "@/types/enum/enum";
 import { Direction } from "@/types/gloable";
 import CheckBox from "@/component/checkBox/CheckBox.vue";
 import CheckBoxWithSingleModelData from "@/component/checkBox/CheckBoxWithSingleModelData.vue";

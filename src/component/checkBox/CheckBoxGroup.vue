@@ -31,7 +31,6 @@ function selectFun(emitData: checkBoxEmitData) {
   if (emitData.isSelected && !haveThisValue) modelData.push(emitData.value); //被選中，且沒有陣列中沒有此值時push
   if (!emitData.isSelected) {
     //沒被選中，陣列中有值，移除之
-    console.log("要移除", valueIndex);
     modelData.splice(valueIndex, 1);
   }
 }

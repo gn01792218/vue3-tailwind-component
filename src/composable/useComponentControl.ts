@@ -11,7 +11,6 @@ export default function useComponentControl(){
     const checkBoxCount = componentControl.checkBoxCount
     function addCheckBox():number{
         componentControl.checkBoxCount++
-        console.log('啟動此函式',componentControl.checkBoxCount)
         return checkBoxCount
     }
     return {

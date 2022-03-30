@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* 自訂一 */
+.clr-coral{
+    background-color: coral !important;
+}
+.clr-aqua{
+    background-color:aqua !important;
+}
+.br-clr-coral{
+    border: 1px solid coral !important;
+}
+.br-clr-aqua{
+    border: 1px solid aqua !important;
+}
+label{
+    position: relative;
+    cursor: pointer;
+}
+.show-box{
+    position: absolute;
+    top:4px;
+    left:0;
+    width:13px;
+    height:13px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: white;
+}
+.show-box-right{
+    top:4px;
+    left:84%;
+}
+.show-box::before{
+    content: '';
+      position: absolute;
+      top: 0px;
+      left: 4px;
+      width: 5px; 
+      height: 10px; 
+      border: solid white;
+      border-width: 0 2px 2px 0; 
+      transform: rotate(40deg);
+}

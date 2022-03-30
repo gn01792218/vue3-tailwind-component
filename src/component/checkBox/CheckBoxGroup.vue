@@ -14,7 +14,7 @@ import {
   CheckBoxProperty,
   CheckGroupData,
   checkBoxEmitData,
-} from "@/types/gloable";
+} from "@/types/checkBox/checkBox";
 import useComponentControl from "@/composable/useComponentControl";
 import CheckBox from "@/component/checkBox/CheckBox.vue";
 const props = defineProps<{

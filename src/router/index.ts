@@ -6,6 +6,16 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component:()=>import('@/views/Home.vue')
   },
+  {
+    path: '/CheckBoxDemo',
+    name: 'CheckBoxDemo',
+    component:()=>import('@/views/CheckBoxDemo.vue')
+  },
+  {
+    path: '/KnobDemo',
+    name: 'KnobDemo',
+    component:()=>import('@/views/KnobDemo.vue')
+  },
 ]
 
 const router = createRouter({

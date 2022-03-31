@@ -5,16 +5,22 @@ body{
     padding:5rem;
 }
 /*  */
-.knob{
+.circle-progress{
+    border-radius: 50%;
+}
+.circle-progress-inner{
+    border-radius: 50%;
 }
 .knob-body{
-    padding-bottom:100%;
-    border-radius: 100%;
+    height:0;
+    padding-bottom:50%;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
 }
 .knob-fill{
     width:inherit;
     transform-origin: center top;
-    transform: rotate(0.5turn);
+    transform: rotate(0.2turn);
     transition: transform 0.2s ease-out;
 }
 .knob-center{
@@ -35,7 +41,7 @@ body{
 }
 .show-box{
     position: absolute;
-    top:4px;
+    top:5px;
     left:0;
     width:13px;
     height:13px;

@@ -1,45 +1,51 @@
 <template>
-  <div class="knob">
-    <div class="knob-body w-full h-full relative overflow-hidden bg-slate-600">
-      <div class="knob-fill absolute top-full left-0 h-full bg-green-600"></div>
-      <div
-        class="knob-center absolute top-1/4 left-1/4 flex justify-center items-center text-lg bg-white"
-      >
-        {{ displayCount }}
-      </div>
+  <div class="circle-progress relative">
+    <div
+      class="circle-progress-inner absolute top-1/4 left-1/4 flex justify-center items-center"
+    >
+      {{ displayCount }}
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import {onMounted} from "vue";
+import { onMounted ,watch ,ref, watchEffect, toRefs } from "vue";
 import useKnob from "@/composable/knob/useKnob";
-const props = defineProps({
-  knobOption: {
-    type: Object,
-    default: {
-      min: 0,
-      max: 100,
-      innerSize:{
-        width:"50px",
-        height:"50px",
-      },
-      outerSize:{
-        width:"100px",
-        height:"100px"
-      },
-      innerColorStyle:{
-        backgroundColor:"white",
-        color:"black",
-      },
-      outerColorStyle:{
-        backgroundColor:"green",
-        color:"green",
-      }
-    },
-  },
-});
-const { setKnobValue, displayCount } = useKnob(props.knobOption);
-onMounted(() => {
-  setKnobValue(50);
-});
+import { knobEmitData, knobProperty } from "@/types/knob/knob";
+const props = defineProps<{
+  count:number,
+  knobOption?:knobProperty,
+}>()
+// const props = defineProps({
+//   knobOption: {
+//     type: Object,
+//     default: {
+//       min: 0,
+//       max: 100,
+//       innerSize: {
+//         width: "50px",
+//         height: "50px",
+//       },
+//       outerSize: {
+//         width: "100px",
+//         height: "100px",
+//       },
+//       innerColorStyle: {
+//         backgroundColor: "blue",
+//         color: "black",
+//       },
+//       outerColorStyle: {
+//         backgroundColor: "gray",
+//         color: "green",
+//         barColor:"green"
+//       },
+//     },
+//   },
+// });
+const { loadKnobOption,displayCount,setKnobValue } = useKnob();
+if(props.knobOption) loadKnobOption(props.knobOption)
+const {count} = toRefs(props)
+watch(count,()=>{
+  setKnobValue(count.value)
+})
+
 </script>

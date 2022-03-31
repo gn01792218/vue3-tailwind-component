@@ -1,11 +1,36 @@
 import { onMounted, ref, watch } from "vue";
 import { Direction } from "@/types/enum/enum";
 import { knobEmitData, knobProperty } from "@/types/knob/knob";
-export default function useKnob(knobOption: knobProperty) {
+
+export default function useKnob() {
+  let knobOption: knobProperty = {
+    min: 0,
+    max: 100,
+    innerSize: {
+      width: "50px",
+      height: "50px",
+    },
+    outerSize: {
+      width: "100px",
+      height: "100px",
+    },
+    innerColorStyle: {
+      backgroundColor: "blue",
+      color: "black",
+    },
+    outerColorStyle: {
+      backgroundColor: "gray",
+      color: "green",
+      barColor:"green"
+    },
+  }
   const max = knobOption.max as number;
   const min = knobOption.min as number;
-  const length = max - min;
+  const long = max - min;
   const displayCount = ref(min);
+  function loadKnobOption(knobOption: knobProperty){
+    knobOption = knobOption
+  }
   function checkDefaultOption() {
     if (!knobOption.innerSize)
       knobOption.innerSize = { width: "50px", height: "50px" };
@@ -13,50 +38,57 @@ export default function useKnob(knobOption: knobProperty) {
       knobOption.outerSize = { width: "100px", height: "100px" };
     if (!knobOption.innerColorStyle)
       knobOption.innerColorStyle = {
-        backgroundColor: "white",
+        backgroundColor: "blue",
         color: "black",
       };
     if (!knobOption.outerColorStyle)
       knobOption.outerColorStyle = {
-        backgroundColor: "green",
+        barColor:"green",
+        backgroundColor: "gray",
         color: "green",
       };
     if (!knobOption.max) knobOption.max = 100;
     if (!knobOption.min) knobOption.min = 0;
+    setColor()
+    setSize() 
   }
   function setColor() {
     const inner = knobOption.innerColorStyle;
     const outer = knobOption.outerColorStyle;
-    const knobCenter = document.querySelector(".knob-center") as HTMLElement;
-    const knobFill = document.querySelector(".knob-fill") as HTMLElement;
-    knobCenter.style.backgroundColor = inner?.backgroundColor as string;
-    knobCenter.style.color = inner?.color as string;
-    knobFill.style.backgroundColor = outer?.backgroundColor as string;
-    knobFill.style.color = outer?.color as string;
+    const outerBarColor = outer?.backgroundColor
+    const barColor = outer?.barColor
+    const outerBar = document.querySelector(".circle-progress") as HTMLElement;
+    const innerEle = document.querySelector(".circle-progress-inner") as HTMLElement;
+    innerEle.style.backgroundColor = inner?.backgroundColor as string;
+    innerEle.style.color = inner?.color as string;
+    outerBar.style.background = `conic-gradient(${barColor} 0, ${barColor} 0%, ${outerBarColor} 0%, ${outerBarColor})` as string;
   }
   function setSize() {
-    const knob = document.querySelector(".knob") as HTMLElement;
-    const knobCenter = document.querySelector(".knob-center") as HTMLElement;
-    knob.style.width = knobOption.outerSize?.width as string;
-    knob.style.height = knobOption.outerSize?.height as string;
-    knobCenter.style.width = knobOption.innerSize?.width as string;
-    knobCenter.style.height = knobOption.innerSize?.height as string;
+    const progress = document.querySelector(".circle-progress") as HTMLElement;
+    const inner = document.querySelector(".circle-progress-inner") as HTMLElement;
+    progress.style.width = knobOption.outerSize?.width as string;
+    progress.style.height = knobOption.outerSize?.height as string;
+    inner.style.width = knobOption.innerSize?.width as string;
+    inner.style.height = knobOption.innerSize?.height as string;
   }
   function setKnobValue(value: number) {
     if (value < min || value > max) return;
-    const knobFill = document.querySelector(".knob-fill") as HTMLElement;
+    const progress = document.querySelector(".circle-progress") as HTMLElement;
+    const outerBarColor = knobOption.outerColorStyle?.backgroundColor
+    const barColor = knobOption.outerColorStyle?.barColor
+    const rate = (value/long)*100
     //讓滾調依據現在狀況轉動
-    knobFill.style.transform = `rotate(${value / length}turn)`;
+    progress.style.background = `conic-gradient(${barColor} 0, ${barColor} ${rate}%, ${outerBarColor} 0%, ${outerBarColor})`;
     //更新中間的數字
     displayCount.value = value;
   }
+  
   onMounted(() => {
     checkDefaultOption();
-    setSize();
-    setColor()
   });
   return {
     setKnobValue,
     displayCount,
+    loadKnobOption,
   };
 }

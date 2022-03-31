@@ -9,5 +9,8 @@ export interface knobProperty {
     outerSize?:Size,
     innerColorStyle?:ColorStyle,
     outerColorStyle?:knobBarStyle,
+    textSize?:string,
 }
-export interface knobEmitData {}
+export interface knobEmitData {
+    isCompleted:boolean,
+}

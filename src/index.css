@@ -1,64 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-    padding:5rem;
+
+body {
+    padding: 5rem;
 }
+
 /*  */
-.circle-progress{
+.circle-progress {
     border-radius: 50%;
 }
-.circle-progress-inner{
+
+.circle-progress-inner {
     border-radius: 50%;
 }
-.knob-body{
-    height:0;
-    padding-bottom:50%;
+
+.knob-body {
+    height: 0;
+    padding-bottom: 50%;
     border-top-left-radius: 100% 200%;
     border-top-right-radius: 100% 200%;
 }
-.knob-fill{
-    width:inherit;
+
+.knob-fill {
+    width: inherit;
     transform-origin: center top;
     transform: rotate(0.2turn);
     transition: transform 0.2s ease-out;
 }
-.knob-center{
+
+.knob-center {
     border-radius: 50%;
 }
+
 /* 自訂一 */
-.clr-coral{
-    background-color: coral !important;
-}
-.clr-aqua{
-    background-color:aqua !important;
-}
-.br-clr-coral{
-    border: 1px solid coral !important;
-}
-.br-clr-aqua{
-    border: 1px solid aqua !important;
-}
-.show-box{
+.show-box {
     position: absolute;
-    top:5px;
-    left:0;
-    width:13px;
-    height:13px;
+    top: 5px;
+    left: 0;
+    width: 13px;
+    height: 13px;
     border-radius: 2px;
 }
-.show-box-right{
-    top:4px;
-    left:100%;
+
+.show-box-right {
+    top: 4px;
+    left: 100%;
 }
-.show-box::before{
+
+.show-box::before {
     content: '';
-      position: absolute;
-      top: 0px;
-      left: 4px;
-      width: 5px; 
-      height: 10px; 
-      border: solid white;
-      border-width: 0 2px 2px 0; 
-      transform: rotate(40deg);
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(40deg);
 }

@@ -12,5 +12,6 @@ export interface knobProperty {
     textSize?:string,
 }
 export interface knobEmitData {
+    id:string,
     isCompleted:boolean,
 }

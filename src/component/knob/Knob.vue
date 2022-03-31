@@ -1,6 +1,10 @@
 <template>
-  <div :id="`circle-knob-${id}`" class="circle-progress flex justify-center items-center">
-    <div :id="`circle-knob-inner-${id}`"
+  <div
+    :id="`circle-knob-${id}`"
+    class="circle-progress flex justify-center items-center"
+  >
+    <div
+      :id="`circle-knob-inner-${id}`"
       class="circle-progress-inner flex justify-center items-center"
     >
       {{ displayCount }}
@@ -8,32 +12,50 @@
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted ,watch ,ref, watchEffect, toRefs } from "vue";
+import {
+  onMounted,
+  watch,
+  ref,
+  watchEffect,
+  toRefs,
+  onUpdated,
+  computed,
+} from "vue";
 import useKnob from "@/composable/knob/useKnob";
 import { knobEmitData, knobProperty } from "@/types/knob/knob";
-const emits = defineEmits(['isCompleted'])
+const emits = defineEmits(["isCompleted"]);
 const props = defineProps<{
-  count:number,
-  knobOption?:knobProperty,
-}>()
-const { loadKnobOption,displayCount,setKnobValue,id,max,knobOptionObj } = useKnob();
-if(props.knobOption) loadKnobOption(props.knobOption)
-// const obj = loadKnobOption(props.knobOption)
-console.log(knobOptionObj)
-const {count} = toRefs(props)
-watch(count,()=>{
-  console.log(max,knobOptionObj)
-  if(count.value > max+1) return
-  if(count.value ==max+1){
-    emitEvent()
+  addNum: any;
+  knobOption?: knobProperty;
+}>();
+const { loadKnobOption, displayCount, setKnobValue, id, max } = useKnob();
+if (props.knobOption) loadKnobOption(props.knobOption);
+const { addNum } = toRefs(props);
+const isCompleted = ref(false);
+watch(addNum, () => {
+  let maxNum = max.value as number;
+  if (displayCount.value > maxNum + 1) return;
+  setKnobValue(props.addNum.addnum);
+  emitEvent();
+});
+function emitEvent() {
+  let maxNum = max.value as number;
+  if (displayCount.value < maxNum) {
+    isCompleted.value = false;
+    let emitObj: knobEmitData = {
+      id:id,
+      isCompleted: isCompleted.value,
+    };
+    emits("isCompleted", emitObj);
+    return
   }
-  setKnobValue(count.value)
-})
-function emitEvent(){
-  console.log('傳送事件')
-  let emitObj : knobEmitData = {
-    isCompleted:true,
-  }
-  emits('isCompleted',emitObj)
+  if (displayCount.value == maxNum && !isCompleted.value){
+    isCompleted.value = true;
+    let emitObj: knobEmitData = {
+      id:id,
+      isCompleted: isCompleted.value,
+    };
+    emits("isCompleted", emitObj);
+  } 
 }
 </script>

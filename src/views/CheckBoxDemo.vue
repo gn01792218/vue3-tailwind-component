@@ -62,7 +62,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import { Color ,Direction  } from "@/types/enum/enum";
+import { Direction  } from "@/types/enum/enum";
 import CheckBox from "@/component/checkBox/CheckBox.vue";
 import CheckBoxWithSingleModelData from "@/component/checkBox/CheckBoxWithSingleModelData.vue";
 import CheckBoxGroupVue from "@/component/checkBox/CheckBoxGroup.vue";

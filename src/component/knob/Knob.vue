@@ -1,6 +1,6 @@
 <template>
-  <div class="circle-progress relative">
-    <div
+  <div :id="`circle-knob-${id}`" class="circle-progress relative">
+    <div :id="`circle-knob-inner-${id}`"
       class="circle-progress-inner absolute top-1/4 left-1/4 flex justify-center items-center"
     >
       {{ displayCount }}
@@ -11,6 +11,7 @@
 import { onMounted ,watch ,ref, watchEffect, toRefs } from "vue";
 import useKnob from "@/composable/knob/useKnob";
 import { knobEmitData, knobProperty } from "@/types/knob/knob";
+
 const props = defineProps<{
   count:number,
   knobOption?:knobProperty,
@@ -41,9 +42,12 @@ const props = defineProps<{
 //     },
 //   },
 // });
-const { loadKnobOption,displayCount,setKnobValue } = useKnob();
+
+
+const { loadKnobOption,displayCount,setKnobValue,id } = useKnob();
 if(props.knobOption) loadKnobOption(props.knobOption)
 const {count} = toRefs(props)
+
 watch(count,()=>{
   setKnobValue(count.value)
 })

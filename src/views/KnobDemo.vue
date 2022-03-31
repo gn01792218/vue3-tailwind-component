@@ -20,7 +20,7 @@
         <div>
             <h3>圓形knob</h3>
             <div class="flex"></div>
-            <!-- <Knob 
+            <Knob 
                 :count="count"
                 :knobOption="{
                     innerColorStyle:{
@@ -28,7 +28,7 @@
                         backgroundColor:'blue',
                     }
                 }"
-            /> -->
+            />
             <Knob 
                 :count="count2"
             />
@@ -43,9 +43,9 @@ import Knob from '@/component/knob/Knob.vue'
 const count = ref(0)
 const count2 = ref(0)
 onMounted(()=>{
-    // setInterval(()=>{
-    //     count.value++
-    // },1000)
+    setInterval(()=>{
+        count.value++
+    },1000)
     setInterval(()=>{
         count2.value++
     },100)

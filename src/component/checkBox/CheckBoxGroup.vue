@@ -15,12 +15,10 @@ import {
   CheckGroupData,
   checkBoxEmitData,
 } from "@/types/checkBox/checkBox";
-import useComponentControl from "@/composable/useComponentControl";
 import CheckBox from "@/component/checkBox/CheckBox.vue";
 const props = defineProps<{
   checkGroupData: CheckGroupData;
 }>();
-const { addCheckBox } = useComponentControl();
 const modelData = reactive<any>([]);
 function selectFun(emitData: checkBoxEmitData) {
   let valueIndex = 0;

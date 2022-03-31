@@ -1,65 +1,45 @@
 <template>
-  <div
-    class="flex justify-center items-center"
-    v-if="checkBoxItem.labelDir === Direction.right"
-  >
-    <label class="relative cursor-pointe">
-      <input
-        class="mr-1"
-        type="checkbox"
-        :value="checkBoxItem.value"
-        v-model="checked"
-      />
-      {{ checkBoxItem.labelStr }}
-      <div :class="[checked ? `${backGroundColorClass} ${borderColorClass}`:'','show-box']"></div>
-    </label>
-  </div>
-  <div
-    class="flex justify-center items-center"
-    v-if="checkBoxItem.labelDir === Direction.left"
-  >
-  <label class="relative cursor-pointer">
-       <span>{{ checkBoxItem.labelStr }}</span>
-      <input
-        class="absolute top-1 mr-1"
-        type="checkbox"
-        :value="checkBoxItem.value"
-        v-model="checked"
-      />
-      <div :class="[checked ? `${backGroundColorClass} ${borderColorClass}`:'','show-box','show-box-right']"></div>
-    </label>
+  <div class="knob">
+    <div class="knob-body w-full h-full relative overflow-hidden bg-slate-600">
+      <div class="knob-fill absolute top-full left-0 h-full bg-green-600"></div>
+      <div
+        class="knob-center absolute top-1/4 left-1/4 flex justify-center items-center text-lg bg-white"
+      >
+        {{ displayCount }}
+      </div>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
-import { onMounted, ref, watch } from "vue";
-import { Color, Direction } from "@/types/enum/enum";
-import { knobEmitData, knobProperty } from "@/types/knob/knob";
-const emits = defineEmits(["isCompleted"]);
-const props = defineProps<{
-  knobOption:{
-      type:knobProperty
-      default:{
-          min:0,
-          max:100,
-          innerWidth:50,
-          outerWidth:100,
+import {onMounted} from "vue";
+import useKnob from "@/composable/knob/useKnob";
+const props = defineProps({
+  knobOption: {
+    type: Object,
+    default: {
+      min: 0,
+      max: 100,
+      innerSize:{
+        width:"50px",
+        height:"50px",
+      },
+      outerSize:{
+        width:"100px",
+        height:"100px"
+      },
+      innerColorStyle:{
+        backgroundColor:"white",
+        color:"black",
+      },
+      outerColorStyle:{
+        backgroundColor:"green",
+        color:"green",
       }
-  };
-}>();
-const count = ref(0)
-onMounted(()=>{
-    runKnob()
-})
-watch(count, () => {
-  console.log('開始跑')
-  if(count.value<props.knobOption.max) return 
-  console.log('跑完了')
-  let knobEmitData: knobEmitData = {
-    isCompleted:true,
-  };
-  emits("isCompleted", knobEmitData);
+    },
+  },
 });
-function runKnob(){
-    setInterval(()=>{count.value++},100)
-}
+const { setKnobValue, displayCount } = useKnob(props.knobOption);
+onMounted(() => {
+  setKnobValue(50);
+});
 </script>

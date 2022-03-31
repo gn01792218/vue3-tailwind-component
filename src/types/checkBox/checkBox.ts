@@ -1,10 +1,10 @@
 import { Direction } from '@/types/enum/enum'
-import { Style } from '@/types/gloable'
+import { ColorStyle } from '@/types/gloable'
 export interface CheckBoxProperty {
     labelStr:string,
     labelDir:Direction,
     value:string | number,
-    style?:Style,
+    style?:ColorStyle,
 }
 export interface checkBoxEmitData {
     isSelected:boolean,

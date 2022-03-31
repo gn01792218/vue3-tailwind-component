@@ -4,10 +4,3 @@ export enum Direction {
     left,
     bottom,
 }
-
-export enum Color {
-    default,
-    red,
-    orange,
-    green,
-}

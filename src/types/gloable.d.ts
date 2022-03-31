@@ -1,1 +1,2 @@
-declare enum Direction {}
+declare interface ColorStyle{}
+declare interface Size{}

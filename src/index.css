@@ -1,8 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+body{
+    padding:5rem;
+}
+/*  */
+.knob{
+}
+.knob-body{
+    padding-bottom:100%;
+    border-radius: 100%;
+}
+.knob-fill{
+    width:inherit;
+    transform-origin: center top;
+    transform: rotate(0.5turn);
+    transition: transform 0.2s ease-out;
+}
+.knob-center{
+    border-radius: 50%;
+}
 /* 自訂一 */
 .clr-coral{
     background-color: coral !important;

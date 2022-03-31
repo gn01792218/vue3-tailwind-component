@@ -9,9 +9,9 @@ export const componentControl = reactive<ComponentControl>({  //控制所有元�
 //使用元件的方法
 export default function useComponentControl(){
     const checkBoxCount = componentControl.checkBoxCount
-    function addCheckBox():number{
+    function addCheckBox():string{
         componentControl.checkBoxCount++
-        return checkBoxCount
+        return String(checkBoxCount)
     }
     return {
         addCheckBox,

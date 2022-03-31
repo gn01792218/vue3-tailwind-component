@@ -1,5 +1,8 @@
-import {Color} from '@/types/enum/enum'
-
-export interface Style{
-    backGroundColor:Color,
+export interface ColorStyle{
+    backgroundColor:string,
+    color:string,
+}
+export interface Size{
+    width:string,
+    height:string,
 }

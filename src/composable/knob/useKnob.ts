@@ -35,7 +35,7 @@ export default function useKnob() {
     return knobOptionObj.value.min as number;
   })
   const long = computed<number>(()=>{
-    return   max.value - min.value;
+    return max.value - min.value;
   })
   const count = ref(min.value)
   const displayCount = computed(()=>{
@@ -46,8 +46,8 @@ export default function useKnob() {
     console.log('最小值發生變化',min.value,'count變成',count.value)
   })
   function loadKnobOption(knobOption: knobProperty) {
-    if(knobOption.min)console.log('設置最小值','原',knobOptionObj.value.min,'修改成',knobOption.min); knobOptionObj.value.min = knobOption.min
-    if(knobOption.max)console.log('設置最大值','原',knobOptionObj.value.max,'修改成',knobOption.max); knobOptionObj.value.max = knobOption.max
+    if(knobOption.min)knobOptionObj.value.min = knobOption.min
+    if(knobOption.max)knobOptionObj.value.max = knobOption.max
     if(knobOption.innerColorStyle) knobOptionObj.value.innerColorStyle = knobOption.innerColorStyle
     if(knobOption.outerColorStyle) knobOptionObj.value.outerColorStyle = knobOption.outerColorStyle
     if(knobOption.innerSize) knobOptionObj.value.innerSize = knobOption.innerSize
@@ -94,10 +94,10 @@ export default function useKnob() {
     } 
     const outerBarColor = knobOptionObj.value.outerColorStyle?.backgroundColor;
     const barColor = knobOptionObj.value.outerColorStyle?.barColor;
-    const rate = Math.round((displayCount.value / long.value) * 100);
+    const rate = Math.floor(((displayCount.value-min.value) / long.value) * 100);
     //讓滾調依據現在狀況轉動
     outerBar.style.background = `conic-gradient(${barColor} 0, ${barColor} ${rate}%, ${outerBarColor} 0%, ${outerBarColor})`;
-    console.log('最小值',min.value,'最大值',max.value,'顯示數字',displayCount.value,'比例',rate,'計數器',count.value)
+    console.log('最小值',min.value,'最大值',max.value,'顯示數字',displayCount.value,'比例',rate,'比例長度',long.value,'計數器',count.value)
   }
   return {
     setKnobValue,

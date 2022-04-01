@@ -18,7 +18,7 @@
       />
     </div> -->
     <div>
-      <h3>圓形knob</h3>
+      <h3><i class="bi bi-trophy-fill"></i>圓形knob</h3>
       <div class="flex">
         <div class="mr-5">
           <Knob
@@ -31,7 +31,7 @@
               },
             }"
           />
-          <p>完成進度否 : {{ count1isCompleted }}</p>
+          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count1isCompleted }}</p>
         </div>
         <div class="mr-5">
           <Knob
@@ -49,7 +49,7 @@
               },
             }"
           />
-          <p>完成進度否 : {{ count2isCompleted }}</p>
+          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count2isCompleted }}</p>
         </div>
         <div>
           <Knob
@@ -72,12 +72,12 @@
               textSize: '7rem',
             }"
           />
-          <p>完成進度否 : {{ count3isCompleted }}</p>
+          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count3isCompleted }}</p>
         </div>
       </div>
     </div>
     <div>
-      <h3>小應用</h3>
+      <h3><i class="bi bi-trophy-fill"></i>小應用</h3>
       <Knob
         @isCompleted="completedAction"
         :addNum="addNum"
@@ -86,7 +86,7 @@
           max: 30,
         }"
       />
-      <p>完成進度否 : {{ count4isCompleted }}</p>
+      <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count4isCompleted }}</p>
       <button
         class="mr-5 border-black border-solid border-2"
         @click="plusOrsubtraction('+5')"

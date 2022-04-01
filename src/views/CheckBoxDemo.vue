@@ -1,8 +1,8 @@
 <template>
   <section>
     <h2 class="text-center">CheckBox展示區</h2>
-    <div class="mb-5 ">
-      <p>可選擇label位置在左或右</p>
+    <div class="m-5 text-center">
+      <p><i class="bi bi-trophy-fill"></i>可選擇label位置在左或右</p>
       <CheckBox
         :checkBoxItem="{
           labelDir: Direction.right,
@@ -22,8 +22,8 @@
         }"
       />
     </div>
-    <div class="mb-5">
-      <p>顯示model data</p>
+    <div class="m-5 text-center">
+      <p><i class="bi bi-trophy-fill"></i>顯示model data</p>
       <CheckBoxWithSingleModelData
         :checkBoxItem="{
           labelDir: Direction.right,
@@ -39,8 +39,8 @@
         }"
       />
     </div>
-    <div class="mb-5">
-      <p>多個使用時，綁定Array數值</p>
+    <div class="m-5 text-center">
+      <p><i class="bi bi-trophy-fill"></i>多個使用時，綁定Array數值</p>
       <CheckBoxGroupVue
         :checkGroupData="{ checkItems: [
         {labelStr:'Dog',labelDir:Direction.right,value:'dog'},
@@ -48,8 +48,8 @@
         ] }"
       />
     </div>
-    <div class="mb-5">
-      <p>自訂義勾選框框的顏色</p>
+    <div class="m-5 text-center">
+      <p><i class="bi bi-trophy-fill"></i>自訂義勾選框框的顏色</p>
       <CheckBoxGroupVue
         :checkGroupData="{ checkItems: [
         {labelStr:'Red',labelDir:Direction.right,value:'red',style:{backgroundColor:'red',color:'black'}},

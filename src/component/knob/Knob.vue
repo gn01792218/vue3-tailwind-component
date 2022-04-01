@@ -1,10 +1,12 @@
 <template>
   <div
     :id="`circle-knob-${id}`"
+    ref="circleKnob"
     class="circle-progress relative flex justify-center items-center"
   >
     <div
       :id="`circle-knob-inner-${id}`"
+      ref="circleKnobInner"
       class="circle-progress-inner absolute flex justify-center items-center"
     >
       {{ displayCount }}
@@ -28,14 +30,16 @@ const props = defineProps<{
   addNum: any;
   knobOption?: knobProperty;
 }>();
-const { loadKnobOption, displayCount, setKnobValue, id, max } = useKnob();
+const circleKnob = ref<HTMLElement | null>(null)
+const circleKnobInner = ref<HTMLElement | null> (null)
+const { loadKnobOption, displayCount, setKnobValue, id, max,setKnobStyle } = useKnob();
 if (props.knobOption) loadKnobOption(props.knobOption);
 const { addNum } = toRefs(props);
 const isCompleted = ref(false);
 watch(addNum, () => {
   let maxNum = max.value as number;
   if (displayCount.value > maxNum + 1) return;
-  setKnobValue(props.addNum.addnum);
+  if(circleKnob.value)setKnobValue(props.addNum.addnum,circleKnob.value);
   emitEvent();
 });
 function emitEvent() {
@@ -58,4 +62,7 @@ function emitEvent() {
     emits("isCompleted", emitObj);
   } 
 }
+onMounted(()=>{
+  if(circleKnob.value && circleKnobInner.value) setKnobStyle(circleKnob.value,circleKnobInner.value)
+})
 </script>

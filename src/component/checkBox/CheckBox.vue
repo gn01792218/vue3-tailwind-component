@@ -13,6 +13,7 @@
       {{ checkBoxItem.labelStr }}
       <div
         :id="`checkBox-${id}`"
+        ref="checkBox"
         :class="[
           checked ? `${backGroundColorClass} ${borderColorClass}` : '',
           'show-box',
@@ -34,6 +35,7 @@
       />
       <div
         :id="`checkBox-${id}`"
+        ref="checkBox"
         :class="[
           checked ? `${backGroundColorClass} ${borderColorClass}` : '',
           'show-box',
@@ -57,28 +59,26 @@ const { addCheckBox } = useComponentControl();
 const id = addCheckBox();
 const checked = ref(false);
 //客製化的設定變數
+const checkBox = ref<HTMLElement | null>(null);
 const style = props.checkBoxItem.style;
 const backGroundColor = style?.backgroundColor;
 const backGroundColorClass = ref("");
 const borderColorClass = ref("");
 onMounted(() => {
-  setColor();
+  if(checkBox.value) setColor(checkBox.value);
 });
 watch(checked, () => {
-  emitEvent()
-  setColor()
+  if(!checkBox.value) return
+  emitEvent();
+  setColor(checkBox.value);
 });
-function setColor() {
+function setColor(checkBox:HTMLElement) {
   if (!style) return;
-  const showBox = document.querySelector(`#checkBox-${id}`) as HTMLElement;
-  // const showBox = document.querySelector('.showBox') as HTMLElement
-  if (checked.value) {
-    console.log('改變顏色')
-    showBox.style.backgroundColor = props.checkBoxItem.style
+  if (checked.value && checkBox) {
+    checkBox.style.backgroundColor = props.checkBoxItem.style
       ?.backgroundColor as string;
-  }else{
-    showBox.style.backgroundColor = "transparent";
-    console.log('改回原色',showBox.style.backgroundColor)
+  } else {
+    checkBox.style.backgroundColor = "transparent";
   }
 }
 function emitEvent() {

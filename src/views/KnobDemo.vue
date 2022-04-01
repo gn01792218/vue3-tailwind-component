@@ -1,22 +1,6 @@
 <template>
   <section class="w-1/2 mr-auto ml-auto">
     <h2 class="text-center text-2xl">knob展示區</h2>
-    <!-- <div>
-      <h3>半圓形knob</h3>
-      <HalfKnob
-        :knobOption="{
-          min: 0,
-          max: 100,
-          innerColorStyle: {
-            backgroundColor: 'red',
-            color: 'black',
-          },
-          outerColorStyle: {
-            backgroundColor: 'blue',
-          },
-        }"
-      />
-    </div> -->
     <div>
       <h3><i class="bi bi-trophy-fill"></i>圓形knob</h3>
       <div class="flex">
@@ -131,7 +115,6 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref, toRefs } from "vue";
 import { Direction } from "@/types/enum/enum";
-import HalfKnob from "@/component/knob/HalfKnob.vue";
 import Knob from "@/component/knob/Knob.vue";
 import { knobEmitData } from "@/types/knob/knob";
 const count1isCompleted = ref(false);

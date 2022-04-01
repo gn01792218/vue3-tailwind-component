@@ -1,7 +1,7 @@
 <template>
   <section class="w-1/2 mr-auto ml-auto">
     <h2 class="text-center text-2xl">knob展示區</h2>
-    <div>
+    <!-- <div>
       <h3><i class="bi bi-trophy-fill"></i>圓形knob</h3>
       <div class="flex">
         <div class="m-5">
@@ -10,6 +10,7 @@
             @isCompleted="completedAction"
             :addNum="count1"
             :knobOption="{
+              max:50,
               innerColorStyle: {
                 color: 'yellow',
                 backgroundColor: 'blue',
@@ -49,6 +50,7 @@
             @isCompleted="completedAction"
             :addNum="count3"
             :knobOption="{
+              max:30,
               outerColorStyle: {
                 color: 'gray',
                 barColor: 'white',
@@ -67,7 +69,7 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
     <div>
       <h3><i class="bi bi-trophy-fill"></i>小應用</h3>
       <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count4isCompleted }}</p>
@@ -75,8 +77,8 @@
         @isCompleted="completedAction"
         :addNum="addNum"
         :knobOption="{
-          min: 0,
-          max: 30,
+          min: 3,
+          max: 35,
         }"
       />
       <button

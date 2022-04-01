@@ -18,10 +18,7 @@ import {
   onMounted,
   watch,
   ref,
-  watchEffect,
   toRefs,
-  onUpdated,
-  computed,
 } from "vue";
 import useKnob from "@/composable/knob/useKnob";
 import { knobEmitData, knobProperty } from "@/types/knob/knob";

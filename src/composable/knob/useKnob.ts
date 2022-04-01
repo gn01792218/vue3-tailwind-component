@@ -2,6 +2,7 @@ import { computed, onMounted, reactive, ref, watch } from "vue";
 import { Direction } from "@/types/enum/enum";
 import { knobEmitData, knobProperty } from "@/types/knob/knob";
 import useComponentControl from "@/composable/useComponentControl";
+import { count } from "console";
 export default function useKnob() {
   const { addKnob } = useComponentControl();
   const id = addKnob();
@@ -36,10 +37,17 @@ export default function useKnob() {
   const long = computed<number>(()=>{
     return   max.value - min.value;
   })
-  const displayCount = ref(min.value);
+  const count = ref(min.value)
+  const displayCount = computed(()=>{
+    return count.value
+  })
+  watch(min,()=>{
+    count.value=min.value
+    console.log('最小值發生變化',min.value,'count變成',count.value)
+  })
   function loadKnobOption(knobOption: knobProperty) {
-    if(knobOption.min) knobOptionObj.value.min = knobOption.min
-    if(knobOption.max) knobOptionObj.value.max = knobOption.max
+    if(knobOption.min)console.log('設置最小值','原',knobOptionObj.value.min,'修改成',knobOption.min); knobOptionObj.value.min = knobOption.min
+    if(knobOption.max)console.log('設置最大值','原',knobOptionObj.value.max,'修改成',knobOption.max); knobOptionObj.value.max = knobOption.max
     if(knobOption.innerColorStyle) knobOptionObj.value.innerColorStyle = knobOption.innerColorStyle
     if(knobOption.outerColorStyle) knobOptionObj.value.outerColorStyle = knobOption.outerColorStyle
     if(knobOption.innerSize) knobOptionObj.value.innerSize = knobOption.innerSize
@@ -56,7 +64,6 @@ export default function useKnob() {
     innerEle.style.fontSize = textSize as string;
   }
   function setColor(outerBar:HTMLElement,innerEle:HTMLElement) {
-    console.log(outerBar,innerEle)
     const inner = knobOptionObj.value.innerColorStyle;
     const outer = knobOptionObj.value.outerColorStyle;
     const outerBarColor = outer?.backgroundColor;
@@ -73,21 +80,24 @@ export default function useKnob() {
     innerEle.style.height = knobOptionObj.value.innerSize?.height as string;
   }
   function setKnobValue(value: number,outerBar:HTMLElement) {
-    console.log(outerBar)
     if (displayCount.value < min.value || displayCount.value > max.value) return;
+    //計數器++
+    count.value += value;
     //更新中間的數字
-    displayCount.value += value;
-    if (displayCount.value+value < min.value){
-      displayCount.value+=min.value-displayCount.value
+    if (displayCount.value+value < min.value){ 
+      count.value+=min.value-displayCount.value
+      // console.log('再-超過最小值了','只能減',min.value-displayCount.value,'最後是',count.value)
     } 
     if (displayCount.value+value > max.value){
-      displayCount.value+=max.value-displayCount.value
+      count.value+=max.value-displayCount.value
+      // console.log('再+超過最大值了','只能+',min.value-displayCount.value,'最後是',count.value)
     } 
     const outerBarColor = knobOptionObj.value.outerColorStyle?.backgroundColor;
     const barColor = knobOptionObj.value.outerColorStyle?.barColor;
-    const rate = (displayCount.value / long.value) * 100;
+    const rate = Math.round((displayCount.value / long.value) * 100);
     //讓滾調依據現在狀況轉動
     outerBar.style.background = `conic-gradient(${barColor} 0, ${barColor} ${rate}%, ${outerBarColor} 0%, ${outerBarColor})`;
+    console.log('最小值',min.value,'最大值',max.value,'顯示數字',displayCount.value,'比例',rate,'計數器',count.value)
   }
   return {
     setKnobValue,

@@ -18,6 +18,7 @@ export default function useKnob(knobOption: knobProperty) {
       };
     if (!knobOption.outerColorStyle)
       knobOption.outerColorStyle = {
+        barColor:"red",
         backgroundColor: "green",
         color: "green",
       };

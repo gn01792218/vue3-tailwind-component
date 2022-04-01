@@ -1,11 +1,11 @@
 <template>
   <div
     :id="`circle-knob-${id}`"
-    class="circle-progress flex justify-center items-center"
+    class="circle-progress relative flex justify-center items-center"
   >
     <div
       :id="`circle-knob-inner-${id}`"
-      class="circle-progress-inner flex justify-center items-center"
+      class="circle-progress-inner absolute flex justify-center items-center"
     >
       {{ displayCount }}
     </div>

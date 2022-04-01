@@ -1,4 +1,5 @@
 <template>
+<div class="text-center">
   <CheckBox
     v-for="(checkBoxItem,index) in checkGroupData.checkItems"
     :key="index"
@@ -6,6 +7,8 @@
     @is-selected="selectFun"
   />
   <p>The model data : {{ modelData }}</p>
+</div>
+  
 </template>
 <script setup lang="ts">
 import { ref, reactive } from "vue";

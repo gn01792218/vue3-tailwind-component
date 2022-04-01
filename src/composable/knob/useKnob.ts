@@ -17,9 +17,9 @@ export default function useKnob() {
       height: "100px",
     },
     outerColorStyle: {
-      barColor: "green",
       backgroundColor: "gray",
       color: "green",
+      barColor: "green",
     },
     innerColorStyle: {
       backgroundColor: "blue",

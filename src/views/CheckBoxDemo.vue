@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="text-center">CheckBox展示區</h2>
+    <h2 class="text-center text-2xl">CheckBox展示區</h2>
     <div class="m-5 text-center">
       <p><i class="bi bi-trophy-fill"></i>可選擇label位置在左或右</p>
       <CheckBox

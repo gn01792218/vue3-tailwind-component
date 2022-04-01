@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <h2 class="text-center">knob展示區</h2>
+  <section class="w-1/2 mr-auto ml-auto">
+    <h2 class="text-center text-2xl">knob展示區</h2>
     <!-- <div>
       <h3>半圓形knob</h3>
       <HalfKnob
@@ -20,8 +20,9 @@
     <div>
       <h3><i class="bi bi-trophy-fill"></i>圓形knob</h3>
       <div class="flex">
-        <div class="mr-5">
-          <Knob
+        <div class="m-5">
+          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count1isCompleted }}</p>
+          <Knob class="m-6"
             @isCompleted="completedAction"
             :addNum="count1"
             :knobOption="{
@@ -31,10 +32,10 @@
               },
             }"
           />
-          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count1isCompleted }}</p>
         </div>
-        <div class="mr-5">
-          <Knob
+        <div class="m-5">
+          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count2isCompleted }}</p>
+          <Knob class="m-10"
             @isCompleted="completedAction"
             :addNum="count2"
             :knobOption="{
@@ -47,11 +48,19 @@
                 color: 'white',
                 backgroundColor: 'gray',
               },
+              innerSize:{
+                width:'100px',
+                height:'100px'
+              },
+              outerSize:{
+                width:'200px',
+                height:'50px'
+              }
             }"
           />
-          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count2isCompleted }}</p>
         </div>
         <div>
+          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count3isCompleted }}</p>
           <Knob
             @isCompleted="completedAction"
             :addNum="count3"
@@ -72,12 +81,12 @@
               textSize: '7rem',
             }"
           />
-          <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count3isCompleted }}</p>
         </div>
       </div>
     </div>
     <div>
       <h3><i class="bi bi-trophy-fill"></i>小應用</h3>
+      <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count4isCompleted }}</p>
       <Knob
         @isCompleted="completedAction"
         :addNum="addNum"
@@ -86,7 +95,6 @@
           max: 30,
         }"
       />
-      <p><i class="bi bi-check2-square"></i>完成進度否 : {{ count4isCompleted }}</p>
       <button
         class="mr-5 border-black border-solid border-2"
         @click="plusOrsubtraction('+5')"

@@ -1,12 +1,12 @@
 <template>
-  <div v-if="checkBoxItem.labelDir === Direction.right">
+  <div class="text-center" v-if="checkBoxItem.labelDir === Direction.right">
       <CheckBox
         :checkBoxItem="checkBoxItem"
         @is-selected="selectFun"
       />
       <p>The model data : {{modelData}}</p>
   </div>
-  <div v-if="checkBoxItem.labelDir === Direction.left">
+  <div class="text-center" v-if="checkBoxItem.labelDir === Direction.left">
       <CheckBox
         :checkBoxItem="checkBoxItem"
         @is-selected="selectFun"

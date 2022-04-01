@@ -14,10 +14,7 @@
       <div
         :id="`checkBox-${id}`"
         ref="checkBox"
-        :class="[
-          checked ? `${backGroundColorClass} ${borderColorClass}` : '',
-          'show-box',
-        ]"
+        class="show-box"
       ></div>
     </label>
   </div>
@@ -36,11 +33,7 @@
       <div
         :id="`checkBox-${id}`"
         ref="checkBox"
-        :class="[
-          checked ? `${backGroundColorClass} ${borderColorClass}` : '',
-          'show-box',
-          'show-box-right',
-        ]"
+        class="show-box show-box-right"
       ></div>
     </label>
   </div>
@@ -51,19 +44,20 @@ import { Direction } from "@/types/enum/enum";
 import { CheckBoxProperty, checkBoxEmitData } from "@/types/checkBox/checkBox";
 import useComponentControl from "@/composable/useComponentControl";
 import { nextTick } from "process";
+defineExpose({
+  setChecked,
+})
 const emits = defineEmits(["isSelected"]);
 const props = defineProps<{
   checkBoxItem: CheckBoxProperty;
 }>();
+
 const { addCheckBox } = useComponentControl();
 const id = addCheckBox();
 const checked = ref(false);
 //客製化的設定變數
 const checkBox = ref<HTMLElement | null>(null);
 const style = props.checkBoxItem.style;
-const backGroundColor = style?.backgroundColor;
-const backGroundColorClass = ref("");
-const borderColorClass = ref("");
 onMounted(() => {
   if(checkBox.value) setColor(checkBox.value);
 });
@@ -72,6 +66,9 @@ watch(checked, () => {
   emitEvent();
   setColor(checkBox.value);
 });
+function setChecked(done:boolean){
+  checked.value = done
+}
 function setColor(checkBox:HTMLElement) {
   if (!style) return;
   if (checked.value && checkBox) {

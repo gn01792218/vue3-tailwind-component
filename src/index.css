@@ -31,6 +31,7 @@ body {
 
 .knob-center {
     border-radius: 50%;
+    color: darkgoldenrod;
 }
 
 /* 自訂一 */

@@ -97,7 +97,7 @@ export default function useKnob() {
     const rate = Math.floor(((displayCount.value-min.value) / long.value) * 100);
     //讓滾調依據現在狀況轉動
     outerBar.style.background = `conic-gradient(${barColor} 0, ${barColor} ${rate}%, ${outerBarColor} 0%, ${outerBarColor})`;
-    console.log('最小值',min.value,'最大值',max.value,'顯示數字',displayCount.value,'比例',rate,'比例長度',long.value,'計數器',count.value)
+    // console.log('最小值',min.value,'最大值',max.value,'顯示數字',displayCount.value,'比例',rate,'比例長度',long.value,'計數器',count.value)
   }
   return {
     setKnobValue,

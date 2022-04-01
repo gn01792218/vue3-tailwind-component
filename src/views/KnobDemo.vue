@@ -23,6 +23,18 @@
               },
             }"
           />
+          <CheckBox
+            ref="count1CheckBox"
+            :checkBoxItem="{
+              labelDir: Direction.right,
+              labelStr: '完成進度',
+              value: '',
+              style: {
+                backgroundColor: 'red',
+                color: 'black',
+              },
+            }"
+          />
         </div>
         <div class="m-5">
           <p>
@@ -56,6 +68,18 @@
               },
             }"
           />
+          <CheckBox
+            ref="count2CheckBox"
+            :checkBoxItem="{
+              labelDir: Direction.right,
+              labelStr: '完成進度',
+              value: '',
+              style: {
+                backgroundColor: 'green',
+                color: 'black',
+              },
+            }"
+          />
         </div>
         <div>
           <p>
@@ -85,6 +109,18 @@
               textSize: '7rem',
             }"
           />
+          <CheckBox
+            ref="count3CheckBox"
+            :checkBoxItem="{
+              labelDir: Direction.right,
+              labelStr: '完成進度',
+              value: '',
+              style: {
+                backgroundColor: 'darkgoldenrod',
+                color: 'black',
+              },
+            }"
+          />
         </div>
       </div>
     </div>
@@ -95,6 +131,7 @@
       </p>
       <p>最小值: {{ count4.min }} 最大值 : {{ count4.max }}</p>
       <Knob
+      class="mb-5"
         @isCompleted="completedAction"
         :addNum="addNum"
         :knobOption="{
@@ -103,35 +140,50 @@
         }"
       />
       <button
-        class="mr-5 border-black border-solid border-2"
+        class="mr-5 border-black border-solid border-2 rounded-full p-2" 
         @click="plusOrsubtraction('+5')"
       >
         +5
       </button>
       <button
-        class="mr-5 border-black border-solid border-2"
+        class="mr-5 border-black border-solid border-2 rounded-full p-2"
         @click="plusOrsubtraction('+2')"
       >
         +2
       </button>
       <button
-        class="mr-5 border-black border-solid border-2"
+        class="mr-5 border-black border-solid border-2 rounded-full p-2"
         @click="plusOrsubtraction('-2')"
       >
         -2
       </button>
       <button
-        class="mr-5 border-black border-solid border-2"
+        class="mr-5 border-black border-solid border-2 rounded-full p-2"
         @click="plusOrsubtraction('-1')"
       >
         -1
       </button>
       <button
-        class="mr-5 border-black border-solid border-2"
+        class="mr-5 border-black border-solid border-2 rounded-full p-2"
         @click="plusOrsubtraction('+1')"
       >
         +1
       </button>
+      <div class="flex justify-start mt-2">
+        <CheckBox
+        ref="count4CheckBox"
+        :checkBoxItem="{
+          labelDir: Direction.right,
+          labelStr: '完成進度',
+          value: '',
+          style: {
+            backgroundColor: 'darkgoldenrod',
+            color: 'black',
+          },
+        }"
+      />
+      </div>
+      
     </div>
   </section>
 </template>
@@ -140,6 +192,8 @@ import { onMounted, reactive, ref, toRefs } from "vue";
 import { Direction } from "@/types/enum/enum";
 import Knob from "@/component/knob/Knob.vue";
 import { knobEmitData } from "@/types/knob/knob";
+import CheckBox from "@/component/checkBox/CheckBox.vue";
+import { ChildProcess } from "child_process";
 const count1isCompleted = ref(false);
 const count2isCompleted = ref(false);
 const count3isCompleted = ref(false);
@@ -149,6 +203,11 @@ let count1 = ref({
   min: 0,
   max: 50,
 });
+const count1CheckBox = ref();
+const count2CheckBox = ref();
+const count3CheckBox = ref();
+const count4CheckBox = ref();
+onMounted(() => {});
 let count2 = ref({
   addnum: 0,
   min: 10,
@@ -189,19 +248,28 @@ onMounted(() => {
     };
   }, 500);
 });
+
 function completedAction(knoEmit: knobEmitData) {
   switch (knoEmit.id) {
     case "0":
       count1isCompleted.value = knoEmit.isCompleted;
+      // console.log(count1CheckBox.value)
+      if (knoEmit.isCompleted)
+        count1CheckBox.value.setChecked(knoEmit.isCompleted);
       break;
     case "1":
       count2isCompleted.value = knoEmit.isCompleted;
+      if (knoEmit.isCompleted)
+        count2CheckBox.value.setChecked(knoEmit.isCompleted);
       break;
     case "2":
       count3isCompleted.value = knoEmit.isCompleted;
+      if (knoEmit.isCompleted)
+        count3CheckBox.value.setChecked(knoEmit.isCompleted);
       break;
     case "3":
       count4isCompleted.value = knoEmit.isCompleted;
+      count4CheckBox.value.setChecked(knoEmit.isCompleted);
       break;
   }
 }

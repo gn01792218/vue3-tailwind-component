@@ -14,7 +14,7 @@
       <div
         :id="`checkBox-${id}`"
         ref="checkBox"
-        class="show-box"
+        class="show-box  checkBox-left"
       ></div>
     </label>
   </div>
@@ -33,7 +33,7 @@
       <div
         :id="`checkBox-${id}`"
         ref="checkBox"
-        class="show-box show-box-right"
+        class="show-box checkBox-right"
       ></div>
     </label>
   </div>

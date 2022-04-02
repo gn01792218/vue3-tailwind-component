@@ -2,12 +2,12 @@
   <div
     :id="`circle-knob-${id}`"
     ref="circleKnob"
-    class="circle-progress relative flex justify-center items-center"
+    class="relative flex justify-center items-center rounded-[50%]"
   >
     <div
       :id="`circle-knob-inner-${id}`"
       ref="circleKnobInner"
-      class="circle-progress-inner absolute flex justify-center items-center"
+      class="absolute flex justify-center items-center rounded-[50%]"
     >
       {{ displayCount }}
     </div>

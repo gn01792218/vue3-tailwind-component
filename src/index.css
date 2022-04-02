@@ -5,49 +5,18 @@
 body {
     padding: 5rem;
 }
-
-/*  */
-.circle-progress {
-    border-radius: 50%;
+/* @apply */
+.btn{
+    @apply p-2 w-40 bg-cyan-600 hover:text-slate-600 hover:bg-cyan-500 border-2 border-solid rounded-sm;
 }
-
-.circle-progress-inner {
-    border-radius: 50%;
+.checkBox-left{
+    @apply w-[13px] h-[13px] absolute top-[5px] left-0 rounded-[2px];
 }
-
-.knob-body {
-    height: 0;
-    padding-bottom: 50%;
-    border-top-left-radius: 100% 200%;
-    border-top-right-radius: 100% 200%;
+.checkBox-right{
+    @apply w-[13px] h-[13px] absolute top-[4px] left-full rounded-[2px];
 }
-
-.knob-fill {
-    width: inherit;
-    transform-origin: center top;
-    transform: rotate(0.2turn);
-    transition: transform 0.2s ease-out;
-}
-
-.knob-center {
-    border-radius: 50%;
-    color: darkgoldenrod;
-}
-
 /* 自訂一 */
-.show-box {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 13px;
-    height: 13px;
-    border-radius: 2px;
-}
 
-.show-box-right {
-    top: 4px;
-    left: 100%;
-}
 
 .show-box::before {
     content: '';

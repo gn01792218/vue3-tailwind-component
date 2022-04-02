@@ -30,5 +30,6 @@ ps.--funn 可以產生完整的預設設定列表<br>
 
 ## 自製元件說明
 ...尚待補充
+### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>
 - knob <br>

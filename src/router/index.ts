@@ -19,8 +19,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  // history: createWebHistory(import.meta.env.VITE_APP_BASE_URL as string),
-  history:createWebHashHistory(import.meta.env.VITE_APP_BASE_URL as string),
+  history: createWebHistory(import.meta.env.VITE_APP_BASE_URL as string),
+  // history:createWebHashHistory(import.meta.env.VITE_APP_BASE_URL as string),
   routes
 })
 export default router

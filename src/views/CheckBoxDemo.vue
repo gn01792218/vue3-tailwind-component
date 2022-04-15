@@ -8,6 +8,10 @@
           labelDir: Direction.right,
           labelStr: '右邊的標籤',
           value: '',
+          style:{
+            backgroundColor:'blue',
+            color:'black'
+          }
         }"
       />
       <CheckBox
@@ -53,7 +57,7 @@
       <CheckBoxGroupVue
         :checkGroupData="{ checkItems: [
         {labelStr:'Red',labelDir:Direction.right,value:'red',style:{backgroundColor:'red',color:'black'}},
-        {labelStr:'Green',labelDir:Direction.left,value:'green',style:{backgroundColor:'green',color:'black'}},
+        {labelStr:'Green',labelDir:Direction.left,value:'green',style:{backgroundColor:'green',color:'red'}},
         {labelStr:'Orange',labelDir:Direction.right,value:'orange',style:{backgroundColor:'orange',color:'black'}},
         ] }"
       />

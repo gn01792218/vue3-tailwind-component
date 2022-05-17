@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'KnobDemo',
     component:()=>import('@/views/KnobDemo.vue')
   },
+  {
+    path: '/BtnDemo',
+    name: 'BtnDemo',
+    component:()=>import('@/views/BtnDemo.vue')
+  },
 ]
 
 const router = createRouter({

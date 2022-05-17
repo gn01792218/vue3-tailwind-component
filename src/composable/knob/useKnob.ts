@@ -32,7 +32,7 @@ export default function useKnob() {
     return knobOptionObj.value.max as number;
   }) 
   const min =computed<number>(()=>{
-    return knobOptionObj.value.min as number;
+    return knobOptionObj.value.min!;
   })
   const long = computed<number>(()=>{
     return max.value - min.value;

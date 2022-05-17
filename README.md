@@ -29,7 +29,10 @@ npx tailwindcss init --full  <br>
 ps.--funn 可以產生完整的預設設定列表<br>
 
 ## 自製元件說明
-...尚待補充
+### btn組件
+#### btn1樣式
+調整transition-origin和rotate角度，就可以改變背景區塊地轉動方向。
+
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>
 - knob <br>

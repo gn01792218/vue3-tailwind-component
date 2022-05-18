@@ -12,6 +12,16 @@
       >
         <Btn2/>
       </DemoSlot>
+      <DemoSlot
+        title="按鈕樣式3"
+      >
+        <Btn3/>
+      </DemoSlot>
+       <DemoSlot
+        title="按鈕樣式4"
+      >
+        <Btn4/>
+      </DemoSlot>
   </div>
 </div>
   
@@ -20,4 +30,6 @@
 import DemoSlot from '../component/DemoSlot.vue'
 import Btn1 from '../component/btn/Btn1.vue'
 import Btn2 from '../component/btn/Btn2.vue'
+import Btn3 from '../component/btn/Btn3.vue'
+import Btn4 from '../component/btn/Btn4.vue'
 </script>

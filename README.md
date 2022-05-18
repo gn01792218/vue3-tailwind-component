@@ -32,6 +32,11 @@ ps.--funn 可以產生完整的預設設定列表<br>
 ### btn組件
 #### btn1樣式
 調整transition-origin和rotate角度，就可以改變背景區塊地轉動方向。
+### btn3樣式調整
+**rotateX和rotaeY為90度的時候為"看不見"的狀態
+**因此改變before和after的初始狀態為0或90度；並相hover時的rotate就可以有向外擴張或向內閉合的效果。
+### btn4樣式調整
+**基本上和btn3是同樣的概念，只是border-radius是100%，並且外框hover時邊框會消失。
 
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>

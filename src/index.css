@@ -19,11 +19,39 @@ body {
     @apply h-full flex justify-center items-center;
 }
 .btn-base{
-    @apply w-[200px] h-[80px] relative border-solid border-4 border-black overflow-hidden;
+    @apply w-[200px] h-[80px] relative overflow-hidden;
+}
+/* 工具類 */
+.wh-full{
+    @apply w-full h-full;
 }
 /* 自訂一 */
-
-
+.rota3d-btn::before{
+    content: "";
+    @apply wh-full;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transform: rotateX(90deg);
+    transition: transform .5s ease;
+}
+.rota3d-btn::after{
+    content: "";
+    @apply wh-full;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transform: rotateY(90deg);
+    transition: transform .5s ease;
+}
+.rota3d-btn:hover::before{
+    transform: rotateX(0deg);
+}
+.rota3d-btn:hover::after{
+    transform: rotateY(0deg);
+}
 .show-box::before {
     content: '';
     position: absolute;

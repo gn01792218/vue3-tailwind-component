@@ -37,6 +37,8 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **因此改變before和after的初始狀態為0或90度；並相hover時的rotate就可以有向外擴張或向內閉合的效果。
 ### btn4樣式調整
 **基本上和btn3是同樣的概念，只是border-radius是100%，並且外框hover時邊框會消失。
+### btn5樣式
+**透過letter-spacing表現字體的擴張效果
 
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>

@@ -21,6 +21,12 @@ body {
 .btn-base{
     @apply w-[200px] h-[80px] relative overflow-hidden;
 }
+.befor-full{
+    @apply before:w-full before:h-full before:absolute before:flex before:justify-center before:items-center;
+}
+.after-full{
+    @apply after:w-full after:h-full after:absolute after:flex after:justify-center after:items-center;
+}
 /* 工具類 */
 .wh-full{
     @apply w-full h-full;

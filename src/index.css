@@ -58,6 +58,20 @@ body {
 .rota3d-btn:hover::after{
     transform: rotateY(0deg);
 }
+.btn11{
+    perspective: 1000px;
+}
+.btn11::before{
+    transform: rotateX(180deg);
+    transform-origin: top;
+}
+.btn11::after{
+    transform: rotateX(180deg);
+    transform-origin: top;
+}
+.btn11:hover:after,.btn11:hover:before{
+    transform: rotateX(0deg);
+}
 .show-box::before {
     content: '';
     position: absolute;

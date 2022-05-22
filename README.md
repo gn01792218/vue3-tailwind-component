@@ -39,6 +39,8 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **基本上和btn3是同樣的概念，只是border-radius是100%，並且外框hover時邊框會消失。
 ### btn5樣式
 **透過letter-spacing表現字體的擴張效果
+## btn10樣式
+**利用before元素 高度的改變製造出的效果，改變hover時的高度可以調整視覺效果。
 
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>

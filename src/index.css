@@ -16,7 +16,7 @@ body {
     @apply w-[13px] h-[13px] absolute top-[4px] left-full rounded-[2px];
 }
 .flex-textcenter{
-    @apply h-full flex justify-center items-center;
+    @apply flex justify-center items-center;
 }
 .btn-base{
     @apply w-[200px] h-[80px] relative overflow-hidden;
@@ -32,6 +32,16 @@ body {
     @apply w-full h-full;
 }
 /* 自訂一 */
+.mixblend-btn::after,.mixblend-btn::before{
+    mix-blend-mode: multiply;
+    z-index: -1;
+}
+.mixblend-btn:hover::before{
+    transform:perspective(1000px) rotateX(75deg);
+}
+.mixblend-btn:hover::after{
+    transform:perspective(1000px) rotateX(-75deg);
+}
 .shadow-ball-btn{
     @apply transition-colors z-10;
 }

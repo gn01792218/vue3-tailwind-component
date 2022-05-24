@@ -67,6 +67,11 @@
       >
         <Btn13/>
       </DemoSlot>
+      <DemoSlot
+        title="按鈕樣式14"
+      >
+        <Btn14/>
+      </DemoSlot>
   </div>
 </div>
   
@@ -86,4 +91,5 @@ import Btn10 from '../component/btn/Btn10.vue'
 import Btn11 from '../component/btn/Btn11.vue'
 import Btn12 from '../component/btn/Btn12.vue'
 import Btn13 from '../component/btn/Btn13.vue'
+import Btn14 from '../component/btn/Btn14.vue'
 </script>

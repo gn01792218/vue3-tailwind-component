@@ -32,6 +32,39 @@ body {
     @apply w-full h-full;
 }
 /* 自訂一 */
+.shadow-ball-btn{
+    @apply transition-colors z-10;
+}
+.shadow-ball-btn::before,.shadow-ball-btn::after{
+    @apply content-[''] w-[20px] h-[20px] rounded-full bg-cyan-500 transition-all duration-500 absolute z-[-2] opacity-0;
+}
+.shadow-ball-btn::before{
+    left:0%;
+    box-shadow: -20px 0px 0px rgb(6,182,212);
+}
+.shadow-ball-btn::after{
+    right:0%;
+    box-shadow: 20px 0px 0px rgb(6,182,212);
+}
+.shadow-ball-btn:hover::before{
+    opacity: 1;
+    left:50%;
+    transform: translateX(50%);
+}
+.shadow-ball-btn:hover::after{
+    opacity: 1;
+    right:50%;
+    transform: translateX(-50%);
+}
+.shadow-ball-btn:hover{
+    @apply text-white;
+}
+.shadow-ball-btn:hover span{
+    @apply wh-full transition-all duration-1000 delay-[0.3s] absolute z-[-1];
+}
+.shadow-ball-btn:hover span{
+    @apply bg-cyan-700 ;
+}
 .rota3d-btn::before{
     content: "";
     @apply wh-full;

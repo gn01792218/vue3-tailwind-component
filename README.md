@@ -41,7 +41,8 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **透過letter-spacing表現字體的擴張效果
 ## btn10樣式
 **利用before元素 高度的改變製造出的效果，改變hover時的高度可以調整視覺效果。
-
+## btn13樣式
+**利用boxshadow的shadow值為0製造出另一個相同形狀，然後進行hover時的位移達到效果。
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>
 - knob <br>

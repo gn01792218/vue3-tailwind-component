@@ -32,6 +32,15 @@ body {
     @apply w-full h-full;
 }
 /* 自訂一 */
+.btn-15:hover span:before{
+    @apply top-0;
+}
+.btn-15:hover span:after{
+    @apply left-[75%];
+}
+.btn-151:hover span:before,.btn-151:hover span:after{
+    @apply top-0;
+}
 .mixblend-btn::after,.mixblend-btn::before{
     mix-blend-mode: multiply;
     z-index: -1;

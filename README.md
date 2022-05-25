@@ -45,6 +45,10 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **利用boxshadow的shadow值為0製造出另一個相同形狀，然後進行hover時的位移達到效果。
 ## btn14樣式
 **利用css mix-blend-mode 製作出疊色效果。
+## btn15樣式
+**利用元素本身及其內部的span製造出四個before、after區塊，並設置各自特殊的初始位置。
+**hover的時候所有偽元素都回到button內。
+**可以利用時間差、區塊初始位置的不同，來達到各種不同的特效。
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>
 - knob <br>

@@ -32,6 +32,12 @@ body {
     @apply w-full h-full;
 }
 /* 自訂一 */
+.btn-16:hover::before{
+    transform: rotateY(180deg);
+}
+.btn-16:hover::after{
+    transform: rotateX(180deg);
+}
 .btn-15:hover span:before{
     @apply top-0;
 }

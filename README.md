@@ -49,6 +49,10 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **利用元素本身及其內部的span製造出四個before、after區塊，並設置各自特殊的初始位置。
 **hover的時候所有偽元素都回到button內。
 **可以利用時間差、區塊初始位置的不同，來達到各種不同的特效。
+** btn16樣式
+**原按鈕尺寸200*80 ； 為了製作線條拉長交叉的效果。before負責左右紅色線條，寬度不變，高度增加30px，初始位置left-15px；after負責上下咖啡色線條,高度不變，寬度增加30px，初始位置top-15px。
+**hover時將before rotaY180；after rotaX180。就可以達到線條互換效果
+**可以將線條左上、右下做成兩組相同顏色，製造不同的視覺效果。
 ### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 - checkBox  <br>
 - knob <br>

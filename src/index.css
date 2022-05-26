@@ -19,7 +19,7 @@ body {
     @apply flex justify-center items-center;
 }
 .btn-base{
-    @apply w-[200px] h-[80px] relative overflow-hidden;
+    @apply w-[200px] h-[80px] relative;
 }
 .before-full{
     @apply before:w-full before:h-full before:absolute before:flex before:justify-center before:items-center;

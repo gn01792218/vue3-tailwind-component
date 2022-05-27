@@ -55,6 +55,8 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **可以將線條左上、右下做成兩組相同顏色，製造不同的視覺效果。
 ### btn18樣式
 **旋轉的字體為span製造，hover時放大+轉1圈
+### btn19樣式
+**使用四個before和after分別製作四個邊線，hover時改變position即可。
 
 - checkBox  <br>
 - knob <br>

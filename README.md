@@ -27,7 +27,7 @@ autoprefixer: {},<br>
 
 npx tailwindcss init --full  <br>
 ps.--funn 可以產生完整的預設設定列表<br>
-
+## <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
 ## 自製元件說明
 ### btn組件
 #### btn1樣式
@@ -39,20 +39,22 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **基本上和btn3是同樣的概念，只是border-radius是100%，並且外框hover時邊框會消失。
 ### btn5樣式
 **透過letter-spacing表現字體的擴張效果
-## btn10樣式
+### btn10樣式
 **利用before元素 高度的改變製造出的效果，改變hover時的高度可以調整視覺效果。
-## btn13樣式
+### btn13樣式
 **利用boxshadow的shadow值為0製造出另一個相同形狀，然後進行hover時的位移達到效果。
-## btn14樣式
+### btn14樣式
 **利用css mix-blend-mode 製作出疊色效果。
-## btn15樣式
+### btn15樣式
 **利用元素本身及其內部的span製造出四個before、after區塊，並設置各自特殊的初始位置。
 **hover的時候所有偽元素都回到button內。
 **可以利用時間差、區塊初始位置的不同，來達到各種不同的特效。
-** btn16樣式
+### btn16樣式
 **原按鈕尺寸200*80 ； 為了製作線條拉長交叉的效果。before負責左右紅色線條，寬度不變，高度增加30px，初始位置left-15px；after負責上下咖啡色線條,高度不變，寬度增加30px，初始位置top-15px。
 **hover時將before rotaY180；after rotaX180。就可以達到線條互換效果
 **可以將線條左上、右下做成兩組相同顏色，製造不同的視覺效果。
-### <a href="https://gn01792218.github.io/vue3-tailwind-component">元件DEMO</a>
+### btn18樣式
+**旋轉的字體為span製造，hover時放大+轉1圈
+
 - checkBox  <br>
 - knob <br>

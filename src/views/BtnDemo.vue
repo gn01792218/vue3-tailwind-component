@@ -92,6 +92,11 @@
       >
         <Btn17/>
       </DemoSlot>
+      <DemoSlot
+        title="按鈕樣式18"
+      >
+        <Btn18/>
+      </DemoSlot>
   </div>
 </div>
   
@@ -116,4 +121,5 @@ import Btn15 from '../component/btn/Btn15.vue'
 import Btn151 from '../component/btn/Btn151.vue'
 import Btn16 from '../component/btn/Btn16.vue'
 import Btn17 from '../component/btn/Btn17.vue'
+import Btn18 from '../component/btn/Btn18.vue'
 </script>

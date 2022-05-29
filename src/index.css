@@ -32,6 +32,9 @@ body {
     @apply w-full h-full;
 }
 /* 自訂一 */
+.btn-20:hover span:before{
+  @apply w-[100%] bg-black;
+}
 .btn-19 span::before,.btn-19 span::after{
     @apply w-[4px] h-[80px] absolute bg-orange-500 transition-all duration-500;
 }

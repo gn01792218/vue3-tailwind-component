@@ -57,6 +57,7 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **旋轉的字體為span製造，hover時放大+轉1圈
 ### btn19樣式
 **使用四個before和after分別製作四個邊線，hover時改變position即可。
-
+### btn20樣子
+**button的外框是由span製造的;上下缺口是span:before 底色白色 寬度８％高度2００％並旋轉４５度製造的（z-index-1);hover時span:before寬度變回１００％
 - checkBox  <br>
 - knob <br>

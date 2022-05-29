@@ -95,7 +95,7 @@
       <DemoSlot
         title="按鈕樣式18"
       >
-        <Btn18/>np
+        <Btn18/>
       </DemoSlot>
       <DemoSlot
         title="按鈕樣式19"
@@ -106,6 +106,11 @@
         title="按鈕樣式20"
       >
         <Btn20/>
+      </DemoSlot>
+      <DemoSlot
+        title="按鈕樣式21"
+      >
+        <Btn21/>
       </DemoSlot>
   </div>
 </div>
@@ -134,4 +139,5 @@ import Btn17 from '../component/btn/Btn17.vue'
 import Btn18 from '../component/btn/Btn18.vue'
 import Btn19 from '../component/btn/Btn19.vue'
 import Btn20 from '../component/btn/Btn20.vue'
+import Btn21 from '../component/btn/Btn21.vue'
 </script>

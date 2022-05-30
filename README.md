@@ -64,5 +64,7 @@ ps.--funn 可以產生完整的預設設定列表<br>
 ### btn22樣式
 **使用before偽元素，大小、底色和原本btn一樣；hover時，scale放大、opacity變成0(有設置transition，所以有漣漪的過渡效果)。
 **原本的btn hover時往上位移5px，並設置下方陰影；active時位移回到原位，陰影也變小。
+### btn23樣式
+**使用沒有寬高的before和after之邊框製作出菱形。邊框粗度為按鈕本體之一半；before:border-t、border-b同樣顏色，border-r設置為透明色；after:改border-l為透明色。
 - checkBox  <br>
 - knob <br>

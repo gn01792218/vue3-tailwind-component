@@ -61,5 +61,8 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **button的外框是由span製造的;上下缺口是span:before 底色白色 寬度８％高度2００％並旋轉４５度製造的（z-index-1);hover時span:before寬度變回１００％
 ### btn21樣式
 **變形使用skew30deg
+### btn22樣式
+**使用before偽元素，大小、底色和原本btn一樣；hover時，scale放大、opacity變成0(有設置transition，所以有漣漪的過渡效果)。
+**原本的btn hover時往上位移5px，並設置下方陰影；active時位移回到原位，陰影也變小。
 - checkBox  <br>
 - knob <br>

@@ -1,9 +1,17 @@
 <template>
-  <div class="btn-base border-solid border-4 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-yellow-300 before:rotate-[90deg] before:origin-top-right before:transition-transform before:duration-150 before:z-[-1] hover:before:rotate-0 overflow-hidden">
-    <!-- <div class="w-full h-full  absolute top-0 origin-bottom-left hover:rotate-90"></div> -->
-    <div class="h-full flex-textcenter text-2xl text-black">Hover Me</div>
+  <div class="card1 w-[300px] relative overflow-hidden">
+    <div class="card-img w-full transition-transform duration-500">
+      <img class="w-full" src="https://picsum.photos/id/684/600/400" alt="demopicture">
+    </div>
+    <div class="card-content w-full h-full absolute flex flex-col items-center justify-center top-0 left-0 text-white transition-all duration-500 opacity-0">
+      <h1 class="uppercase text-lg">{{card.caption}}</h1>
+      <span class="capitalize">{{card.description}}</span>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
-    
+import { Card } from '@/types/card/card';
+const props = defineProps<{
+  card:Card,
+}>();
 </script>

@@ -31,7 +31,7 @@ body {
 .wh-full{
     @apply w-full h-full;
 }
-/* 自訂一 */
+/* 自訂btn一 */
 .btn-20:hover span:before{
   @apply w-[100%] bg-black;
 }
@@ -156,4 +156,12 @@ body {
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(40deg);
+}
+/* 自訂cards一 */
+.card1:hover .card-img{
+    transform: scale(1.5) rotate(15deg);
+}
+.card1:hover .card-content{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
 }

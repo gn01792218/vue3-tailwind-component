@@ -167,3 +167,9 @@ body {
 .card2:hover .card-content{
     @apply translate-x-[0] bg-opacity-80;
 }
+.card3:hover .card-img{
+    @apply translate-x-full;
+}
+.card3:hover .card-content{
+    @apply translate-x-[0];
+}

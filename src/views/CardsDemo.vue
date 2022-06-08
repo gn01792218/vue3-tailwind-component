@@ -22,6 +22,16 @@
             }"
         />
       </DemoSlot>
+      <DemoSlot
+        title="card樣式3"
+      >
+        <Card3
+            :card="{
+                caption:'This is a Picture!',
+                description:'add some description to card now~!'
+            }"
+        />
+      </DemoSlot>
   </div>
 </div>
   
@@ -30,4 +40,5 @@
 import DemoSlot from '../component/DemoSlot.vue'
 import Card1 from '../component/cards/Card1.vue'
 import Card2 from '../component/cards/card2.vue'
+import Card3 from '../component/cards/card3.vue'
 </script>

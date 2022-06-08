@@ -1,9 +1,9 @@
 <template>
-  <div class="card card2 w-[300px] relative overflow-hidden">
-    <div class="card-img w-full transition-transform duration-300">
+  <div class="card4 w-[300px] relative overflow-hidden">
+    <div class="card-img w-full transition-transform duration-200">
       <img class="w-full" src="https://picsum.photos/id/684/600/400" alt="demopicture">
     </div>
-    <div class="card-content w-full h-full absolute flex flex-col items-center justify-center top-0 left-0 text-white transition-all duration-300 translate-x-[-100%] opacity-0">
+    <div class="card-content w-full h-[30%] absolute flex flex-col items-center justify-center bottom-0 left-0 text-white transition-all duration-200 translate-y-[100%] bg-black">
       <h1 class="uppercase text-lg">{{card.caption}}</h1>
       <span class="capitalize">{{card.description}}</span>
     </div>

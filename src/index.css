@@ -173,3 +173,9 @@ body {
 .card3:hover .card-content{
     @apply translate-x-[0];
 }
+.card4:hover .card-img{
+    @apply translate-y-[-30%];
+}
+.card4:hover .card-content{
+    @apply translate-y-[0];
+}

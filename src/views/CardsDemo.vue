@@ -32,6 +32,16 @@
             }"
         />
       </DemoSlot>
+      <DemoSlot
+        title="card樣式4"
+      >
+        <Card4
+            :card="{
+                caption:'This is a Picture!',
+                description:'add some description to card now~!'
+            }"
+        />
+      </DemoSlot>
   </div>
 </div>
   
@@ -39,6 +49,7 @@
 <script setup lang="ts">
 import DemoSlot from '../component/DemoSlot.vue'
 import Card1 from '../component/cards/Card1.vue'
-import Card2 from '../component/cards/card2.vue'
-import Card3 from '../component/cards/card3.vue'
+import Card2 from '../component/cards/Card2.vue'
+import Card3 from '../component/cards/Card3.vue'
+import Card4 from '../component/cards/Card4.vue'
 </script>

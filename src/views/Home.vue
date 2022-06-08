@@ -4,17 +4,17 @@
       Vue3+Typscript+Tailwind自製組件展示
     </h1>
     <div class="flex flex-wrap justify-center">
-      <router-link class="mr-5 btn" to="/CheckBoxDemo"
-        >checkBox組件</router-link
-      >
-      <router-link class="mr-5 btn" to="/KnobDemo">knob組件</router-link>
-      <router-link class="mr-5 btn" to="/BtnDemo">btn組件</router-link>
-      <router-link class="mr-5 btn" to="/CardsDemo">cards組件</router-link>
+      <router-link
+        v-for="(router) in routers.slice(1)" :key="router.path"
+        class="mr-5 btn"
+        :to="router.path"
+      >{{router.name}}</router-link>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-// const router = useRouter()
-// console.log(router)
+import { useRouter } from "vue-router";
+const router = useRouter()
+const routers = router.getRoutes()
 </script>

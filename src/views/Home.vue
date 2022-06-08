@@ -9,9 +9,12 @@
       >
       <router-link class="mr-5 btn" to="/KnobDemo">knob組件</router-link>
       <router-link class="mr-5 btn" to="/BtnDemo">btn組件</router-link>
+      <router-link class="mr-5 btn" to="/CardsDemo">cards組件</router-link>
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
+// const router = useRouter()
+// console.log(router)
 </script>

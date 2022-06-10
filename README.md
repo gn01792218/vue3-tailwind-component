@@ -32,39 +32,42 @@ ps.--funn 可以產生完整的預設設定列表<br>
 ### btn組件
 #### btn1樣式
 調整transition-origin和rotate角度，就可以改變背景區塊地轉動方向。
-### btn3樣式調整
+#### btn3樣式調整
 **rotateX和rotaeY為90度的時候為"看不見"的狀態
 **因此改變before和after的初始狀態為0或90度；並相hover時的rotate就可以有向外擴張或向內閉合的效果。
-### btn4樣式調整
+#### btn4樣式調整
 **基本上和btn3是同樣的概念，只是border-radius是100%，並且外框hover時邊框會消失。
-### btn5樣式
+#### btn5樣式
 **透過letter-spacing表現字體的擴張效果
-### btn10樣式
+#### btn10樣式
 **利用before元素 高度的改變製造出的效果，改變hover時的高度可以調整視覺效果。
-### btn13樣式
+#### btn13樣式
 **利用boxshadow的shadow值為0製造出另一個相同形狀，然後進行hover時的位移達到效果。
-### btn14樣式
+#### btn14樣式
 **利用css mix-blend-mode 製作出疊色效果。
-### btn15樣式
+#### btn15樣式
 **利用元素本身及其內部的span製造出四個before、after區塊，並設置各自特殊的初始位置。
 **hover的時候所有偽元素都回到button內。
 **可以利用時間差、區塊初始位置的不同，來達到各種不同的特效。
-### btn16樣式
+#### btn16樣式
 **原按鈕尺寸200*80 ； 為了製作線條拉長交叉的效果。before負責左右紅色線條，寬度不變，高度增加30px，初始位置left-15px；after負責上下咖啡色線條,高度不變，寬度增加30px，初始位置top-15px。
 **hover時將before rotaY180；after rotaX180。就可以達到線條互換效果
 **可以將線條左上、右下做成兩組相同顏色，製造不同的視覺效果。
-### btn18樣式
+#### btn18樣式
 **旋轉的字體為span製造，hover時放大+轉1圈
-### btn19樣式
+#### btn19樣式
 **使用四個before和after分別製作四個邊線，hover時改變position即可。
-### btn20樣子
+#### btn20樣子
 **button的外框是由span製造的;上下缺口是span:before 底色白色 寬度８％高度2００％並旋轉４５度製造的（z-index-1);hover時span:before寬度變回１００％
-### btn21樣式
+#### btn21樣式
 **變形使用skew30deg
-### btn22樣式
+#### btn22樣式
 **使用before偽元素，大小、底色和原本btn一樣；hover時，scale放大、opacity變成0(有設置transition，所以有漣漪的過渡效果)。
 **原本的btn hover時往上位移5px，並設置下方陰影；active時位移回到原位，陰影也變小。
-### btn23樣式
+#### btn23樣式
 **使用沒有寬高的before和after之邊框製作出菱形。邊框粗度為按鈕本體之一半；before:border-t、border-b同樣顏色，border-r設置為透明色；after:改border-l為透明色。
+### card組件
+#### Card5樣式
+**文字部分hover時，delay0.5秒才出現；離開時正常運行動畫
 - checkBox  <br>
 - knob <br>

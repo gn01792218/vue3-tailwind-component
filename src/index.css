@@ -3,182 +3,197 @@
 @tailwind utilities;
 
 body {
-    padding: 5rem;
+  padding: 5rem;
 }
 /* @apply */
-.btn{
-    @apply p-2 w-40 bg-cyan-600 hover:text-slate-600 hover:bg-cyan-500 border-2 border-solid rounded-sm;
+.btn {
+  @apply p-2 w-40 bg-cyan-600 hover:text-slate-600 hover:bg-cyan-500 border-2 border-solid rounded-sm;
 }
-.checkBox-left{
-    @apply w-[13px] h-[13px] absolute top-[5px] left-0 rounded-[2px];
+.checkBox-left {
+  @apply w-[13px] h-[13px] absolute top-[5px] left-0 rounded-[2px];
 }
-.checkBox-right{
-    @apply w-[13px] h-[13px] absolute top-[4px] left-full rounded-[2px];
+.checkBox-right {
+  @apply w-[13px] h-[13px] absolute top-[4px] left-full rounded-[2px];
 }
-.flex-textcenter{
-    @apply flex justify-center items-center;
+.flex-textcenter {
+  @apply flex justify-center items-center;
 }
-.btn-base{
-    @apply w-[200px] h-[80px] relative;
+.btn-base {
+  @apply w-[200px] h-[80px] relative;
 }
-.before-full{
-    @apply before:w-full before:h-full before:absolute before:flex before:justify-center before:items-center;
+.before-full {
+  @apply before:w-full before:h-full before:absolute before:flex before:justify-center before:items-center;
 }
-.after-full{
-    @apply after:w-full after:h-full after:absolute after:flex after:justify-center after:items-center;
+.after-full {
+  @apply after:w-full after:h-full after:absolute after:flex after:justify-center after:items-center;
 }
 /* 工具類 */
-.wh-full{
-    @apply w-full h-full;
+.wh-full {
+  @apply w-full h-full;
 }
 /* 自訂btn一 */
-.btn-20:hover span:before{
+.btn-20:hover span:before {
   @apply w-[100%] bg-black;
 }
-.btn-19 span::before,.btn-19 span::after{
-    @apply w-[4px] h-[80px] absolute bg-orange-500 transition-all duration-500;
+.btn-19 span::before,
+.btn-19 span::after {
+  @apply w-[4px] h-[80px] absolute bg-orange-500 transition-all duration-500;
 }
-.btn-19:hover span:before{
-    @apply bottom-0;
+.btn-19:hover span:before {
+  @apply bottom-0;
 }
-.btn-19:hover span:after{
-    @apply top-0;
+.btn-19:hover span:after {
+  @apply top-0;
 }
-.btn-18:hover span{
-    font-size: 80px;
-    transform: translate(-10%,-10%) rotate(1turn);
+.btn-18:hover span {
+  font-size: 80px;
+  transform: translate(-10%, -10%) rotate(1turn);
 }
-.btn-16:hover::before{
-    transform: rotateY(180deg);
+.btn-16:hover::before {
+  transform: rotateY(180deg);
 }
-.btn-16:hover::after{
-    transform: rotateX(180deg);
+.btn-16:hover::after {
+  transform: rotateX(180deg);
 }
-.btn-15:hover span:before{
-    @apply top-0;
+.btn-15:hover span:before {
+  @apply top-0;
 }
-.btn-15:hover span:after{
-    @apply left-[75%];
+.btn-15:hover span:after {
+  @apply left-[75%];
 }
-.btn-151:hover span:before,.btn-151:hover span:after{
-    @apply top-0;
+.btn-151:hover span:before,
+.btn-151:hover span:after {
+  @apply top-0;
 }
-.mixblend-btn::after,.mixblend-btn::before{
-    mix-blend-mode: multiply;
-    z-index: -1;
+.mixblend-btn::after,
+.mixblend-btn::before {
+  mix-blend-mode: multiply;
+  z-index: -1;
 }
-.mixblend-btn:hover::before{
-    transform:perspective(1000px) rotateX(75deg);
+.mixblend-btn:hover::before {
+  transform: perspective(1000px) rotateX(75deg);
 }
-.mixblend-btn:hover::after{
-    transform:perspective(1000px) rotateX(-75deg);
+.mixblend-btn:hover::after {
+  transform: perspective(1000px) rotateX(-75deg);
 }
-.shadow-ball-btn{
-    @apply transition-colors z-10;
+.shadow-ball-btn {
+  @apply transition-colors z-10;
 }
-.shadow-ball-btn::before,.shadow-ball-btn::after{
-    @apply content-[''] w-[20px] h-[20px] rounded-full bg-cyan-500 transition-all duration-700 absolute z-[-2] opacity-0;
+.shadow-ball-btn::before,
+.shadow-ball-btn::after {
+  @apply content-[''] w-[20px] h-[20px] rounded-full bg-cyan-500 transition-all duration-700 absolute z-[-2] opacity-0;
 }
-.shadow-ball-btn::before{
-    left:0%;
-    box-shadow: -20px 0px 0px rgb(6,182,212);
+.shadow-ball-btn::before {
+  left: 0%;
+  box-shadow: -20px 0px 0px rgb(6, 182, 212);
 }
-.shadow-ball-btn::after{
-    right:0%;
-    box-shadow: 20px 0px 0px rgb(6,182,212);
+.shadow-ball-btn::after {
+  right: 0%;
+  box-shadow: 20px 0px 0px rgb(6, 182, 212);
 }
-.shadow-ball-btn:hover::before{
-    opacity: 1;
-    left:50%;
-    transform: translateX(50%);
+.shadow-ball-btn:hover::before {
+  opacity: 1;
+  left: 50%;
+  transform: translateX(50%);
 }
-.shadow-ball-btn:hover::after{
-    opacity: 1;
-    right:50%;
-    transform: translateX(-50%);
+.shadow-ball-btn:hover::after {
+  opacity: 1;
+  right: 50%;
+  transform: translateX(-50%);
 }
-.shadow-ball-btn:hover{
-    @apply text-white;
+.shadow-ball-btn:hover {
+  @apply text-white;
 }
-.shadow-ball-btn:hover span{
-    @apply wh-full transition-all duration-300 delay-[0.3s] absolute z-[-1];
+.shadow-ball-btn:hover span {
+  @apply wh-full transition-all duration-300 delay-[0.3s] absolute z-[-1];
 }
-.shadow-ball-btn:hover span{
-    @apply bg-cyan-700 ;
+.shadow-ball-btn:hover span {
+  @apply bg-cyan-700;
 }
-.rota3d-btn::before{
-    content: "";
-    @apply wh-full;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -1;
-    transform: rotateX(90deg);
-    transition: transform .5s ease;
+.rota3d-btn::before {
+  content: "";
+  @apply wh-full;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotateX(90deg);
+  transition: transform 0.5s ease;
 }
-.rota3d-btn::after{
-    content: "";
-    @apply wh-full;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: -1;
-    transform: rotateY(90deg);
-    transition: transform .5s ease;
+.rota3d-btn::after {
+  content: "";
+  @apply wh-full;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotateY(90deg);
+  transition: transform 0.5s ease;
 }
-.rota3d-btn:hover::before{
-    transform: rotateX(0deg);
+.rota3d-btn:hover::before {
+  transform: rotateX(0deg);
 }
-.rota3d-btn:hover::after{
-    transform: rotateY(0deg);
+.rota3d-btn:hover::after {
+  transform: rotateY(0deg);
 }
-.btn11{
-    perspective: 1000px;
+.btn11 {
+  perspective: 1000px;
 }
-.btn11::before{
-    transform: rotateX(180deg);
-    transform-origin: top;
+.btn11::before {
+  transform: rotateX(180deg);
+  transform-origin: top;
 }
-.btn11::after{
-    transform: rotateX(180deg);
-    transform-origin: top;
+.btn11::after {
+  transform: rotateX(180deg);
+  transform-origin: top;
 }
-.btn11:hover:after,.btn11:hover:before{
-    transform: rotateX(0deg);
+.btn11:hover:after,
+.btn11:hover:before {
+  transform: rotateX(0deg);
 }
 .show-box::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 4px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(40deg);
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(40deg);
 }
 /* 自訂cards一 */
-.card:hover .card-content{
-    @apply opacity-100 bg-opacity-50 bg-black;
+.card:hover .card-content {
+  @apply opacity-100 bg-opacity-50 bg-black;
 }
-.card1:hover .card-img,.card2:hover .card-img{
-    @apply scale-[1.5] rotate-[15deg];
+.card1:hover .card-img,
+.card2:hover .card-img {
+  @apply scale-[1.5] rotate-[15deg];
 }
-.card2:hover .card-content{
-    @apply translate-x-[0] bg-opacity-80;
+.card2:hover .card-content {
+  @apply translate-x-[0] bg-opacity-80;
 }
-.card3:hover .card-img{
-    @apply translate-x-full;
+.card3:hover .card-img {
+  @apply translate-x-full;
 }
-.card3:hover .card-content{
-    @apply translate-x-[0];
+.card3:hover .card-content {
+  @apply translate-x-[0];
 }
-.card4:hover .card-img{
-    @apply translate-y-[-30%];
+.card4:hover .card-img {
+  @apply translate-y-[-30%];
 }
-.card4:hover .card-content{
-    @apply translate-y-[0];
+.card4:hover .card-content {
+  @apply translate-y-[0];
 }
-.card5:hover .card-content{
-    @apply translate-y-0 opacity-100 delay-300
+.card5:hover .card-content {
+  @apply translate-y-0 opacity-100 delay-300;
+}
+.card6:hover > .card-content > h2 {
+  @apply translate-x-0 translate-y-0 delay-300;
+}
+.card6:hover > .card-content > p {
+  @apply translate-x-0 translate-y-0 delay-[0.4s];
+}
+.card6:hover > .card-content > a {
+  @apply translate-y-0 delay-500;
 }

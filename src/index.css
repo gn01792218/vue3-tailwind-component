@@ -197,3 +197,12 @@ body {
 .card6:hover > .card-content > a {
   @apply translate-y-0 delay-500;
 }
+.card7:hover > .card-content > h2 {
+  @apply translate-y-0 delay-300;
+}
+.card7:hover > .card-content > p {
+  @apply translate-x-0 rotate-0 delay-[0.4s];
+}
+.card7:hover > .card-content > a {
+  @apply opacity-100 translate-y-0 delay-500;
+}

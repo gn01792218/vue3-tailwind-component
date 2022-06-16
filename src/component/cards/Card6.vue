@@ -1,5 +1,5 @@
 <template>
-    <div class="card6 w-[450px] h-[300px] relative overflow-hidden
+    <div class="card6 w-[300px] h-[300px] relative overflow-hidden
     before:absolute before:w-[150%] before:h-[250%] before:left-0 before:top-0 before:bg-[#2d3436] before:opacity-80 before:transition before:duration-300 before:translate-x-[350px] before:translate-y-[250px] before:rotate-45
     hover:before:translate-x-[-50px] hover:before:translate-y-[-250px]
     ">

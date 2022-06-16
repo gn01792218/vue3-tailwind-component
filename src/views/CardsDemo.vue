@@ -62,6 +62,16 @@
             }"
         />
       </DemoSlot>
+      <DemoSlot
+        title="card樣式7"
+      >
+        <Card7
+            :card="{
+                caption:'This is a Picture!',
+                description:'add some description to card now~!and see more...。add some description to card now~!and see more...。add some description to card now~!and see more...'
+            }"
+        />
+      </DemoSlot>
   </div>
 </div>
   
@@ -74,4 +84,5 @@ import Card3 from '../component/cards/Card3.vue'
 import Card4 from '../component/cards/Card4.vue'
 import Card5 from '../component/cards/Card5.vue'
 import Card6 from '../component/cards/Card6.vue'
+import Card7 from '../component/cards/Card7.vue'
 </script>

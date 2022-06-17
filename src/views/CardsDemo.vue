@@ -53,7 +53,7 @@
         />
       </DemoSlot>
       <DemoSlot
-        title="card樣式6"
+        title="card樣式6(高固定)"
       >
         <Card6
             :card="{
@@ -63,7 +63,7 @@
         />
       </DemoSlot>
       <DemoSlot
-        title="card樣式7"
+        title="card樣式7(高固定)"
       >
         <Card7
             :card="{
@@ -73,9 +73,29 @@
         />
       </DemoSlot>
       <DemoSlot
-        title="card樣式8"
+        title="card樣式8(高固定)"
       >
         <Card8
+            :card="{
+                caption:'This is a Picture!',
+                description:'add some description to card now~!and see more...。add some description to card now~!and see more...。add some description to card now~!and see more...'
+            }"
+        />
+      </DemoSlot>
+       <DemoSlot
+        title="card樣式9(高固定)"
+      >
+        <Card9
+            :card="{
+                caption:'This is a Picture!',
+                description:'add some description to card now~!and see more...。add some description to card now~!and see more...。add some description to card now~!and see more...'
+            }"
+        />
+      </DemoSlot>
+      <DemoSlot
+        title="card樣式10(高固定)"
+      >
+        <Card10
             :card="{
                 caption:'This is a Picture!',
                 description:'add some description to card now~!and see more...。add some description to card now~!and see more...。add some description to card now~!and see more...'
@@ -96,4 +116,6 @@ import Card5 from '../component/cards/Card5.vue'
 import Card6 from '../component/cards/Card6.vue'
 import Card7 from '../component/cards/Card7.vue'
 import Card8 from '../component/cards/Card8.vue'
+import Card9 from '../component/cards/Card9.vue'
+import Card10 from '../component/cards/Card10.vue'
 </script>

@@ -218,3 +218,24 @@ body {
 .card8:hover > .card-content > a {
   @apply opacity-100 translate-y-0 delay-500;
 }
+.card9:hover > .card-content > h2 {
+  @apply opacity-100 scale-100 delay-300;
+}
+.card9:hover > .card-content > p {
+  @apply opacity-100 scale-100 delay-300;
+}
+.card9:hover > .card-content > a {
+  @apply translate-y-0 delay-300;
+}
+.card10:hover > .card-img {
+  @apply scale-0 rotate-[1turn];
+}
+.card10:hover > .card-content > h2 {
+  @apply opacity-100 translate-y-0 delay-300;
+}
+.card10:hover > .card-content > p {
+  @apply opacity-100 translate-y-0 delay-[0.4s];
+}
+.card10:hover > .card-content > a {
+  @apply opacity-100 translate-y-0 delay-[0.8s];
+}

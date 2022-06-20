@@ -74,5 +74,9 @@ ps.--funn 可以產生完整的預設設定列表<br>
 **卡片內容各自有自己的初始化位置，並在hover時，設置delay回復到原位。
 #### Card8樣式
 **hover時圖片先縮小-->再放大遮罩(hover時delay300秒) ； 離開時遮罩先縮小-->再放大圖片(圖片元素本身delay300秒)
+### nav組件
+#### nav1樣式
+**li項目的before之 transform-origin為left；after為right。兩者初始scale為0
+**hover時兩者scale回到1
 - checkBox  <br>
 - knob <br>

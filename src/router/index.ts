@@ -26,6 +26,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'CardsDemo',
     component:()=>import('@/views/CardsDemo.vue')
   },
+  {
+    path: '/NavDemo',
+    name: 'NavDemo',
+    component:()=>import('@/views/NavDemo.vue')
+  },
 ]
 
 const router = createRouter({

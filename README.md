@@ -78,5 +78,8 @@ ps.--funn 可以產生完整的預設設定列表<br>
 #### nav1樣式
 **li項目的before之 transform-origin為left；after為right。兩者初始scale為0
 **hover時兩者scale回到1
+#### nav4、5樣式
+**運用transform-origin 和scaleX或scaleY來調整hover時的動畫。
+**after和before元素本身設置delay達到階層式出場的效果。
 - checkBox  <br>
 - knob <br>

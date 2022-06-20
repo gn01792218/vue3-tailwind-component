@@ -23,6 +23,20 @@
             :navItems="[{name:'Contact'},{name:'Home'},{name:'Services'},{name:'Portfolio'},{name:'About'}]"
         />
       </DemoSlot>
+      <DemoSlot
+        title="nav樣式4"
+      >
+        <Nav4
+            :navItems="[{name:'Contact'},{name:'Home'},{name:'Services'},{name:'Portfolio'},{name:'About'}]"
+        />
+      </DemoSlot>
+       <DemoSlot
+        title="nav樣式5"
+      >
+        <Nav5
+            :navItems="[{name:'Contact'},{name:'Home'},{name:'Services'},{name:'Portfolio'},{name:'About'}]"
+        />
+      </DemoSlot>
   </div>
 </div>
   
@@ -32,4 +46,6 @@ import DemoSlot from '../component/DemoSlot.vue'
 import Nav1 from '../component/navs/Nav1.vue'
 import Nav2 from '../component/navs/Nav2.vue'
 import Nav3 from '../component/navs/Nav3.vue'
+import Nav4 from '../component/navs/Nav4.vue'
+import Nav5 from '../component/navs/Nav5.vue'
 </script>

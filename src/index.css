@@ -162,6 +162,46 @@ body {
   border-width: 0 2px 2px 0;
   transform: rotate(40deg);
 }
+/* 自訂navs */
+.nav1 .active:before,.nav1 .active:after{
+  @apply scale-100;
+}
+.nav2 .active{
+  @apply bg-yellow-500;
+}
+.nav3 .active{
+  @apply bg-yellow-500 rounded-lg text-white;
+}
+.nav3 .active::before{
+  @apply opacity-100 top-0 left-0;
+}
+.nav3 .active::after{
+  @apply opacity-100 bottom-0 right-0;
+}
+.nav4 .active{
+  @apply bg-black text-white
+}
+.nav4 li:hover span:before,.nav4 li:hover span:after{
+  @apply scale-y-100;
+}
+.nav4 li:hover span:before{
+  @apply delay-[0.2s];
+}
+.nav4 li:hover span:after{
+  @apply delay-[0.3s];
+}
+.nav5 .active{
+  @apply bg-black text-white;
+}
+.nav5 li:hover span:before,.nav5 li:hover span:after{
+  @apply scale-x-100;
+}
+.nav5 li:hover span:before{
+  @apply delay-[0.2s];
+}
+.nav5 li:hover span:after{
+  @apply delay-[0.3s];
+}
 /* 自訂cards一 */
 .card:hover .card-content {
   @apply opacity-100 bg-opacity-50 bg-black;

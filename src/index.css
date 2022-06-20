@@ -202,6 +202,21 @@ body {
 .nav5 li:hover span:after{
   @apply delay-[0.3s];
 }
+.nav6 .active::before{
+  @apply right-[50%] w-[50%];
+}
+.nav6 .active::after{
+  @apply left-[50%] w-[50%];
+}
+.nav7:hover li{
+  @apply blur-[2px];
+}
+.nav7 li:hover{
+  @apply blur-0;
+}
+.nav7 .active{
+  @apply bg-red-300;
+}
 /* 自訂cards一 */
 .card:hover .card-content {
   @apply opacity-100 bg-opacity-50 bg-black;

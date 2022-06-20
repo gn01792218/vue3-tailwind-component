@@ -1,0 +1,1 @@
+import{e as s,o,c as a,b as l,t as n,B as c}from"./vendor.8fb44a7e.js";const r={class:"m-3"},i={class:"text-slot-400 text-2xl mb-5"},d=s({props:{title:null},setup(t){return(e,p)=>(o(),a("div",r,[l("h1",i,n(t.title),1),c(e.$slots,"default")]))}});export{d as _};

@@ -80,7 +80,7 @@
         />
       </DemoSlot>
       <div class="flex">
-        <DemoSlot title="nav樣式8[直版]">
+        <!-- <DemoSlot title="nav樣式8[直版]">
           <Nav8
             :navItems="[
               { name: 'Contact' },
@@ -90,7 +90,7 @@
               { name: 'About' },
             ]"
           />
-        </DemoSlot>
+        </DemoSlot> -->
         <DemoSlot title="nav樣式9[直版]">
           <Nav9
             :navItems="[

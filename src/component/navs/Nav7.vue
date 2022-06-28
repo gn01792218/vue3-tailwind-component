@@ -7,7 +7,7 @@
             :key="nav.name"
             @click="switchNav(nav.name)"
             :class="[{active:currentNav==nav.name}]"
-        >{{nav.name}}</li>
+        ><router-link to="/NavDemo">{{nav.name}}</router-link></li>
     </ul>
   </nav>
 </template>

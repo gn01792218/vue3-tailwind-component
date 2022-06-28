@@ -217,6 +217,15 @@ body {
 .nav7 .active{
   @apply bg-red-300;
 }
+.nav9 .active{
+  @apply border-b-2 border-lime-800;
+}
+.nav9 li a:hover span:nth-child(1){
+  @apply translate-y-[-100%] delay-[0s]
+} 
+.nav9 li a:hover span:nth-child(2){
+  @apply translate-y-[-100%] delay-[0s]
+} 
 /* 自訂cards一 */
 .card:hover .card-content {
   @apply opacity-100 bg-opacity-50 bg-black;

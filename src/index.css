@@ -217,6 +217,9 @@ body {
 .nav7 .active{
   @apply bg-red-300;
 }
+.nav8 li a{
+  -webkit-text-stroke: 1px black;
+}
 .nav9 .active{
   @apply border-b-2 border-lime-800;
 }

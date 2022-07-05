@@ -90,6 +90,17 @@
             ]"
           />
         </DemoSlot>
+        <DemoSlot title="nav樣式11[直版]">
+          <Nav11
+            :navItems="[
+              { name: 'Contact' },
+              { name: 'Home' },
+              { name: 'Services' },
+              { name: 'Portfolio' },
+              { name: 'About' },
+            ]"
+          />
+        </DemoSlot>
       <div class="flex">
         <DemoSlot title="nav樣式8[直版]">
           <Nav8
@@ -129,4 +140,5 @@ import Nav7 from "../component/navs/Nav7.vue";
 import Nav8 from "../component/navs/Nav8.vue";
 import Nav9 from "../component/navs/Nav9.vue";
 import Nav10 from "../component/navs/Nav10.vue";
+import Nav11 from "../component/navs/Nav11.vue";
 </script>

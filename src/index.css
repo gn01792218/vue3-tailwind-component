@@ -235,6 +235,9 @@ body {
 .nav10 .active a:before{
   @apply border-y-2 border-y-black opacity-100 scale-y-[1.5];
 }
+.nav11 li:hover a span:before,.nav11 li:hover a span:after{
+  @apply opacity-100 translate-x-0 translate-y-0
+}
 /* 自訂cards一 */
 .card:hover .card-content {
   @apply opacity-100 bg-opacity-50 bg-black;

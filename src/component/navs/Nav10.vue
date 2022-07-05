@@ -5,8 +5,8 @@
                 :class="[{ active: currentNav == nav.name }]">
                 <router-link 
                     class="relative px-2 py-1 hover:text-white
-                            before:absolute before:w-full before:h-full before:left-0  before:border-y-2 before:border-y-black before:transition-transform before:duration-500 before:scale-y-[2] before:opacity-0
-                            after:absolute after:z-[-1] after:w-full after:h-full after:left-0 after:bg-black after:transition-transform after:duration-500 after:scale-0
+                            before:absolute before:w-full before:h-full before:left-0 before:top-0  before:border-y-2 before:border-y-black before:transition-transform before:duration-500 before:scale-y-[2] before:opacity-0
+                            after:absolute after:z-[-1] after:w-full after:h-full after:left-0 after:top-0 after:bg-black after:transition-transform after:duration-500 after:scale-0
                             hover:before:scale-y-[1.5] hover:before:opacity-100
                             hover:after:scale-100
                 " to="/NavDemo">

@@ -229,6 +229,12 @@ body {
 .nav9 li a:hover span:nth-child(2){
   @apply translate-y-[-100%] delay-[0s]
 } 
+.nav10 .active {
+  @apply bg-black text-white;
+}
+.nav10 .active a:before{
+  @apply border-y-2 border-y-black opacity-100 scale-y-[1.5];
+}
 /* 自訂cards一 */
 .card:hover .card-content {
   @apply opacity-100 bg-opacity-50 bg-black;

@@ -238,6 +238,12 @@ body {
 .nav11 li:hover a span:before,.nav11 li:hover a span:after{
   @apply opacity-100 translate-x-0 translate-y-0
 }
+.nav11 li.active a span:before,.nav11 li.active a span:after{
+  @apply opacity-100 translate-x-0 translate-y-0
+}
+.nav12 li.active a:before,.nav12 li.active a:after{
+  @apply w-[8px] h-[8px]
+} 
 /* 自訂cards一 */
 .card:hover .card-content {
   @apply opacity-100 bg-opacity-50 bg-black;

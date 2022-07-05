@@ -87,6 +87,7 @@ ps.--funn 可以產生完整的預設設定列表<br>
 #### nav9樣式
 **文字由li內的a連結兩個span組成；被景色由a:before組成
 **hover時，文字先位移，背景才由左至由填滿(scaleX(1)) ； 恢復時，背景由左至右消失((scaleX(0)))，文字才位移回來。
-
+#### nav10樣式
+**上下橫條是before的上和下邊框 ； 黑色背景是after
 - checkBox  <br>
 - knob <br>
